@@ -3,10 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EC Imóveis</title>
+  <title>EC Imóveis | Imóveis de Luxo em SP e Interior</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-  <title>EC Imóveis | Imóveis de Luxo em SP e Interior</title>
   <meta name="description" content="EC Imóveis oferece imóveis de alto padrão nas regiões mais exclusivas como Quinta da Baroneza, Praça Villa Lobos e Fazenda Boa Vista.">
   <meta name="robots" content="index, follow">
   <meta property="og:title" content="EC Imóveis | Imóveis de Luxo em SP e Interior">
@@ -14,28 +13,47 @@
   <meta property="og:image" content="https://www.ecimoveis.com.br/images/hero.jpeg">
   <meta property="og:url" content="https://www.ecimoveis.com.br/">
   <meta name="twitter:card" content="summary_large_image">
+  <!-- Adicione o Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
   <header>
-    <div class="container">
-      <h1 class="logo">EC Imóveis</h1>
-        <div id="navbar-container"></div>
-      <!-- <nav>
-        <ul>
-          <li><a href="#home">Início</a></li>
-          <li><a href="#imoveis">Imóveis</a></li>
-          <li><a href="#contato">Contato</a></li>
-          <a href="https://wa.me/5511916298686" target="_blank" class="btn-whatsapp">Whatsapp</a>
-        </ul>
-      </nav> -->
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm" aria-label="Menu principal">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#home" aria-label="EC Imóveis - Início">EC Imóveis</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav mb-2 mb-lg-0 align-items-lg-center gap-2">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Início</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#imoveis">Imóveis</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="quem-somos.html">Quem Somos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contato">Contato</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-success ms-lg-3" href="https://wa.me/5511916298686" target="_blank" rel="noopener" aria-label="Fale conosco no WhatsApp">
+                <img src="/ECImoveis/images/WhatsApp_icon.png" alt="WhatsApp" style="width:20px; margin-right:1px; vertical-align:middle;">WhatsApp
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </header>
 
-  <section id="home" class="hero">
+  <section id="home" class="hero" itemscope itemtype="https://schema.org/LocalBusiness">
     <div class="overlay"></div>
     <div class="hero-content">
-      <h2>Bem-vindo à EC Imóveis</h2>
-      <p>Simplicidade e sofisticação para destacar imóveis de alto padrão e o estilo de vida que merecem.</p>
+      <h2 itemprop="name">Bem-vindo à EC Imóveis</h2>
+      <p itemprop="description">Simplicidade e sofisticação para destacar imóveis de alto padrão e o estilo de vida que merecem.</p>
     </div>
   </section>
 
@@ -148,22 +166,28 @@
     </div>
   </footer>
 
-  <a href="https://wa.me/5511916298686" class="whatsapp-float" target="_blank">
+  <a href="https://wa.me/5511916298686" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
     <img src="/ECImoveis/images/WhatsApp_icon.png" alt="WhatsApp" class="no-filter">
   </a>
   <script>
-    fetch("navbar.html")
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById("navbar-container").innerHTML = data;
-  
-        // ativar menu mobile
-        document.getElementById("menu-mobile").addEventListener("click", () => {
-          document.querySelector(".nav-list").classList.toggle("active");
-        });
+    // Navbar responsiva
+    document.getElementById("menu-mobile").addEventListener("click", function() {
+      const navList = document.getElementById("nav-list");
+      navList.classList.toggle("active");
+      this.setAttribute("aria-expanded", navList.classList.contains("active"));
+      this.classList.toggle("active");
+    });
+    // Fecha o menu ao clicar em um link (mobile UX)
+    document.querySelectorAll('.nav-list a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById("nav-list").classList.remove("active");
+        document.getElementById("menu-mobile").classList.remove("active");
+        document.getElementById("menu-mobile").setAttribute("aria-expanded", "false");
       });
+    });
   </script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

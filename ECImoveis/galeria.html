@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galeria | EC Imóveis</title>
+  <meta name="description" content="Veja a galeria de imóveis de alto padrão da EC Imóveis em São Paulo e interior. Imagens exclusivas de propriedades de luxo.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="EC Imóveis">
+  <meta property="og:title" content="Galeria | EC Imóveis">
+  <meta property="og:description" content="Galeria de imagens de imóveis de alto padrão em São Paulo e interior.">
+  <meta property="og:image" content="https://www.ecimoveis.com.br/images/fotos_profissionais_ecp_imoveis_Condominio_praca_villa_lobos/IMG_9651-HDR.jpg">
+  <meta name="twitter:image" content="https://www.ecimoveis.com.br/images/fotos_profissionais_ecp_imoveis_Condominio_praca_villa_lobos/IMG_9651-HDR.jpg">
+  <meta property="og:url" content="https://www.ecimoveis.com.br/galeria.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Galeria | EC Imóveis">
+  <meta name="twitter:description" content="Veja fotos exclusivas de imóveis de luxo em São Paulo e interior.">
+  <meta name="twitter:image" content="https://www.ecimoveis.com.br/images/quem-somos.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: #222;
+      color: #fff;
+      /*font-family: 'Playfair Display', serif;*/
+    }
+    .galeria-pinterest {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 24px;
+      padding: 60px 0;
+      overflow: hidden;
+      min-height: 80vh;
+    }
+    .coluna-galeria {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      animation: moverColuna 20s linear infinite;
+    }
+    .coluna-galeria.invertida {
+      animation-direction: reverse;
+    }
+    .coluna-galeria img {
+      width: 220px;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+    .coluna-galeria img:hover {
+      transform: scale(1.06);
+      z-index: 2;
+    }
+    @keyframes moverColuna {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-50%); }
+    }
+    @media (max-width: 900px) {
+      .galeria-pinterest { gap: 10px; }
+      .coluna-galeria img { width: 120px; }
+    }
+    @media (max-width: 600px) {
+      .galeria-pinterest { flex-direction: column; align-items: center; }
+      .coluna-galeria { flex-direction: row; }
+      .coluna-galeria img { width: 90px; }
+    }
+  </style>
+  <!-- Scripts Bootstrap no head para compatibilidade com alguns navegadores -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm" aria-label="Menu principal">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html" aria-label="EC Imóveis - Início">EC Imóveis</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav mb-2 mb-lg-0 align-items-lg-center gap-2">
+            <li class="nav-item">
+              <a class="nav-link" href="galeria.html">Galeria</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="imoveis.html">Imóveis</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="quem-somos.html">Quem Somos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#contato">Contato</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-success ms-lg-3" href="https://wa.me/5511916298686" target="_blank" rel="noopener" aria-label="Fale conosco no WhatsApp">
+                <img src="/ECImoveis/images/WhatsApp_icon.png" alt="WhatsApp" style="width:20px; margin-right:1px; vertical-align:middle;">WhatsApp
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <h1 style="text-align:center; margin-top:30px;">Galeria de Imóveis</h1>
+    <p style="text-align:center; color:#fff; font-size:1.25rem; font-weight:600; margin: 24px auto 32px auto; max-width: 480px; border-radius: 8px; padding: 16px 24px;">
+      Clique em uma imagem para ver mais detalhes sobre o imóvel correspondente.
+    </p>
+    <div class="galeria-pinterest">
+      <div class="coluna-galeria">
+        <a href="condominio-praca-villa-lobos.html">
+          <img src="/ECImoveis/images/fotos_profissionais_ecp_imoveis_Condominio_praca_villa_lobos/IMG_9651-HDR.jpg" alt="Imóvel 1">
+        </a>
+        <a href="condominio-praca-villa-lobos.html">
+          <img src="/ECImoveis/images/fotos_profissionais_ecp_imoveis_Condominio_praca_villa_lobos/IMG_9663-HDR.jpg" alt="Imóvel 2">
+        </a>
+        <img src="/ECImoveis/images/fotos_profissionais_ecp_imoveis_Condominio_praca_villa_lobos/IMG_9678-HDR.jpg" alt="Imóvel 3">
+        <img src="/ECImoveis/images/fotos_profissionais_ecp_imoveis_Condominio_praca_villa_lobos/IMG_9693-HDR.jpg" alt="Imóvel 4">
+        <img src="/ECImoveis/images/fotos_profissionais_ecp_imoveis_Condominio_praca_villa_lobos/IMG_9705-HDR.jpg" alt="Imóvel 5">
+        <img src="/ECImoveis/images/fotos_profissionais_ecp_imoveis_Condominio_praca_villa_lobos/IMG_9717-HDR.jpg" alt="Imóvel 6">
+        <img src="/ECImoveis/images/fotos_profissionais_ecp_imoveis_Condominio_praca_villa_lobos/IMG_9732-HDR.jpg" alt="Imóvel 7">
+        <img src="/ECImoveis/images/fotos_profissionais_ecp_imoveis_Condominio_praca_villa_lobos/IMG_9744-HDR.jpg" alt="Imóvel 8">
+      </div>
+      <div class="coluna-galeria invertida">
+        <a href="condominio-praca-villa-lobos.html">
+          <img src="/ECImoveis/images/fotos_profissionais_ecp_imoveis_Condominio_praca_villa_lobos/IMG_9654-HDR.jpg" alt="Imóvel 9">
+        </a>
+        <img src="/ECImoveis/images/fotos_profissionais_ecp_imoveis_Condominio_praca_villa_lobos/IMG_9666-HDR.jpg" alt="Imóvel 10">
+        <img src="/ECImoveis/images/fotos_profissionais_ecp_imoveis_Condominio_praca_villa_lobos/IMG_9681-HDR.jpg" alt="Imóvel 11">
+        <img src="/ECImoveis/images/fotos_profissionais_ecp_imoveis_Condominio_praca_villa_lobos/IMG_9696-HDR.jpg" alt="Imóvel 12">
+        <img src="/ECImoveis/images/fotos_profissionais_ecp_imoveis_Condominio_praca_villa_lobos/IMG_9699-HDR.jpg" alt="Imóvel 13">
+        <img src="/ECImoveis/images/fotos_profissionais_ecp_imoveis_Condominio_praca_villa_lobos/IMG_9723-HDR.jpg" alt="Imóvel 14">
+        <img src="/ECImoveis/images/fotos_profissionais_ecp_imoveis_Condominio_praca_villa_lobos/IMG_9735-HDR.jpg" alt="Imóvel 15">
+        <img src="/ECImoveis/images/fotos_profissionais_ecp_imoveis_Condominio_praca_villa_lobos/IMG_9747-HDR.jpg" alt="Imóvel 16">
+      </div>
+      <div class="coluna-galeria">
+        <img src="/ECImoveis/images/fotos_profissionais_ecp_imoveis_Condominio_praca_villa_lobos/IMG_9657-HDR.jpg" alt="Imóvel 17">
+        <img src="/ECImoveis/images/fotos_profissionais_ecp_imoveis_Condominio_praca_villa_lobos/IMG_9672-HDR.jpg" alt="Imóvel 18">
+        <img src="/ECImoveis/images/fotos_profissionais_ecp_imoveis_Condominio_praca_villa_lobos/IMG_9684-HDR.jpg" alt="Imóvel 19">
+        <img src="/ECImoveis/images/fotos_profissionais_ecp_imoveis_Condominio_praca_villa_lobos/IMG_9699-HDR.jpg" alt="Imóvel 20">
+        <img src="/ECImoveis/images/fotos_profissionais_ecp_imoveis_Condominio_praca_villa_lobos/IMG_9714-HDR.jpg" alt="Imóvel 21">
+        <img src="/ECImoveis/images/fotos_profissionais_ecp_imoveis_Condominio_praca_villa_lobos/IMG_9726-HDR.jpg" alt="Imóvel 22">
+        <img src="/ECImoveis/images/fotos_profissionais_ecp_imoveis_Condominio_praca_villa_lobos/IMG_9738-HDR.jpg" alt="Imóvel 23">
+        <img src="/ECImoveis/images/fotos_profissionais_ecp_imoveis_Condominio_praca_villa_lobos/IMG_9750-HDR.jpg" alt="Imóvel 24">
+      </div>
+      <div class="coluna-galeria invertida">
+        <img src="/ECImoveis/images/fotos_profissionais_ecp_imoveis_Condominio_praca_villa_lobos/IMG_9660-HDR.jpg" alt="Imóvel 25">
+        <img src="/ECImoveis/images/fotos_profissionais_ecp_imoveis_Condominio_praca_villa_lobos/IMG_9675-HDR.jpg" alt="Imóvel 26">
+        <img src="/ECImoveis/images/fotos_profissionais_ecp_imoveis_Condominio_praca_villa_lobos/IMG_9687-HDR.jpg" alt="Imóvel 27">
+        <img src="/ECImoveis/images/fotos_profissionais_ecp_imoveis_Condominio_praca_villa_lobos/IMG_9702-HDR.jpg" alt="Imóvel 28">
+        <img src="/ECImoveis/images/fotos_profissionais_ecp_imoveis_Condominio_praca_villa_lobos/IMG_9720-HDR.jpg" alt="Imóvel 29">
+        <img src="/ECImoveis/images/fotos_profissionais_ecp_imoveis_Condominio_praca_villa_lobos/IMG_9732-HDR.jpg" alt="Imóvel 30">
+        <img src="/ECImoveis/images/fotos_profissionais_ecp_imoveis_Condominio_praca_villa_lobos/IMG_9741-HDR.jpg" alt="Imóvel 31">
+        <img src="/ECImoveis/images/fotos_profissionais_ecp_imoveis_Condominio_praca_villa_lobos/IMG_9753-HDR.jpg" alt="Imóvel 32">
+      </div>
+    </div>
+  </main>
+  <footer class="footer-elegante">
+    <div class="footer-container">
+      <div class="footer-coluna">
+        <h3>EC IMÓVEIS</h3>
+        <p>Desde 2017 oferecendo exclusividade<br>em imóveis de alto padrão.</p>
+      </div>
+      <div class="footer-coluna">
+        <h3>Endereço</h3>
+        <p>Av. Dra Ruth Cardoso, 4797<br>São Paulo - SP • 05477-000</p>
+      </div>
+      <div class="footer-coluna">
+        <h3>Contato</h3>
+        <p>WhatsApp: <br><a href="https://wa.me/5511916298686" target="_blank">(11) 91629-8686</a></p>
+        <p>Email: <br><a href="mailto:carlappestanasantini@gmail.com">carlappestanasantini@gmail.com</a></p>
+      </div>
+    </div>
+    <div class="footer-social-icons">
+      <div class="social-icons">
+        <a href="https://instagram.com/seuperfil" target="_blank" aria-label="Instagram">
+          <img src="images/instagram-bw.png" alt="Instagram">
+        </a>
+        <a href="https://wa.me/5511916298686" target="_blank" aria-label="WhatsApp">
+          <img src="images/whatsapp-bw.png" alt="WhatsApp">
+        </a>
+        <a href="https://tiktok.com/@seuperfil" target="_blank" aria-label="TikTok">
+          <img src="images/tiktok-bw.png" alt="TikTok">
+        </a>
+        <a href="https://youtube.com/@seucanal" target="_blank" aria-label="YouTube">
+          <img src="images/youtube-bw.png" alt="YouTube">
+        </a>
+      </div>
+      <p>&copy; 2025 EC Imóveis — Todos os direitos reservados.</p>
+    </div>
+  </footer>
+  <a href="https://wa.me/5511916298686" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <img src="/ECImoveis/images/WhatsApp_icon.png" alt="WhatsApp" class="no-filter">
+  </a>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Navbar responsiva
+    document.getElementById("menu-mobile")?.addEventListener("click", function() {
+      const navList = document.getElementById("nav-list");
+      navList.classList.toggle("active");
+      this.setAttribute("aria-expanded", navList.classList.contains("active"));
+      this.classList.toggle("active");
+    });
+    // Fecha o menu ao clicar em um link (mobile UX)
+    document.querySelectorAll('.nav-list a').forEach(link => {
+      link.addEventListener('click', function() {
+        const navList = document.getElementById("nav-list");
+        navList.classList.remove("active");
+        document.getElementById("menu-mobile")?.classList.remove("active");
+      });
+    });
+  </script>
+</body>
+</html>

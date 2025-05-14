@@ -17,23 +17,40 @@
   <meta name="twitter:image" content="https://www.ecimoveis.com.br/images/quem-somos.jpg">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="quem-somos.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
   <header>
-    <div class="container">
-      <h1 class="logo">EC Imóveis</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Início</a></li>
-          <li><a href="index.html#imoveis">Imóveis</a></li>
-          <li><a href="index.html#contato">Contato</a></li>
-          <a href="https://wa.me/5511916298686" target="_blank" class="btn-whatsapp">Whatsapp</a>
-        </ul>
-      </nav>
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm" aria-label="Menu principal">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html" aria-label="EC Imóveis - Início">EC Imóveis</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav mb-2 mb-lg-0 align-items-lg-center gap-2">
+            <li class="nav-item">
+              <a class="nav-link" href="galeria.html">Galeria</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="imoveis.html">Imóveis</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="quem-somos.html">Quem Somos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#contato">Contato</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-success ms-lg-3" href="https://wa.me/5511916298686" target="_blank" rel="noopener" aria-label="Fale conosco no WhatsApp">
+                <img src="/ECImoveis/images/WhatsApp_icon.png" alt="WhatsApp" style="width:20px; margin-right:1px; vertical-align:middle;">WhatsApp
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </header>
-
   <main class="quem-somos-page">
     <section class="quem-somos">
       <div class="quem-somos-container" style="max-width: 1200px; margin: auto; padding: 80px 20px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 40px; text-align: center;">
@@ -43,7 +60,7 @@
             A <strong>EC Imóveis</strong> nasceu em 2017 com o propósito de elevar o padrão do mercado imobiliário de luxo. Atuamos com excelência em imóveis exclusivos, oferecendo um atendimento diferenciado, sigiloso e altamente personalizado.
           </p>
           <p style="font-size: 17px; line-height: 1.8; margin-bottom: 20px; color: #ccc;">
-            Nosso portfólio contempla propriedades nas localizações mais desejadas do país, como <em>Quinta da Baroneza</em>, <em>Praça Villa Lobos</em> e <em>Fazenda Boa Vista</em>.
+            Nosso portfólio contempla propriedades nas localizações mais desejadas do país, como <em>Quinta da Baroneza</em>, <em>Condomínio Praça Villa Lobos</em> e <em>Condomínio On the Park</em>.
           </p>
           <p style="font-size: 17px; line-height: 1.8; margin-bottom: 20px; color: #ccc;">
             Mais do que imóveis, entregamos experiências. Acreditamos que sofisticação está nos detalhes, e é por isso que acompanhamos cada cliente com atenção e profissionalismo desde o primeiro contato até a entrega das chaves — ou da próxima oportunidade de investimento.
@@ -98,5 +115,8 @@
       <p>&copy; 2025 EC Imóveis — Todos os direitos reservados.</p>
     </div>
   </footer>
+
+<!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

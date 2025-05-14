@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nossos Imóveis | EC Imóveis</title>
+  <meta name="description" content="Conheça nosso portfólio de imóveis de alto padrão na Quinta da Baroneza, Condomínio Praça Villa Lobos e Condomínio On the Park.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="EC Imóveis">
+  <meta property="og:title" content="Nossos Imóveis | EC Imóveis">
+  <meta property="og:description" content="Imóveis de alto padrão em São Paulo e interior. Conheça nosso portfólio exclusivo.">
+  <meta property="og:image" content="https://www.ecimoveis.com.br/images/quem-somos.jpg">
+  <meta property="og:url" content="https://www.ecimoveis.com.br/imoveis.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Nossos Imóveis | EC Imóveis">
+  <meta name="twitter:description" content="Portfólio de imóveis de luxo em São Paulo e interior.">
+  <meta name="twitter:image" content="https://www.ecimoveis.com.br/images/quem-somos.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    main {
+      padding-top: 80px;
+      padding-bottom: 80px;
+      min-height: 60vh;
+      flex: 1 0 auto;
+    }
+    .cards-container {
+      margin-bottom: 40px;
+      gap: 32px;
+    }
+    @media (max-width: 768px) {
+      main {
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm" aria-label="Menu principal">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html" aria-label="EC Imóveis - Início">EC Imóveis</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav mb-2 mb-lg-0 align-items-lg-center gap-2">
+            <li class="nav-item">
+              <a class="nav-link" href="galeria.html">Galeria</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="imoveis.html">Imóveis</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="quem-somos.html">Quem Somos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#contato">Contato</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-success ms-lg-3" href="https://wa.me/5511916298686" target="_blank" rel="noopener" aria-label="Fale conosco no WhatsApp">
+                <img src="/ECImoveis/images/WhatsApp_icon.png" alt="WhatsApp" style="width:20px; margin-right:1px; vertical-align:middle;">WhatsApp
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="imoveis">
+      <h2>Imóveis em destaque</h2>
+      <div class="cards-container">
+        <div class="card">
+          <img src="/ECImoveis/images/quinta-baroneza-01.jpg" alt="Casa na Quinta da Baroneza">
+          <div class="card-content">
+            <h3>Casa Moderna - Baroneza</h3>
+            <p>5 suítes • 650m² • Piscina</p>
+            <p><strong>R$ 8.500.000</strong></p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="/ECImoveis/images/villa-lobos-01.jpg" alt="Apartamento no Villa Lobos">
+          <div class="card-content">
+            <h3>Apartamento Premium</h3>
+            <p>4 dormitórios • 260m² • Terraço gourmet</p>
+            <p><strong>R$ 6.200.000</strong></p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="/ECImoveis/images/on-the-park-01.jpg" alt="Casa no On the Park">
+          <div class="card-content">
+            <h3>Casa de Luxo</h3>
+            <p>6 suítes • 800m² • Jardim</p>
+            <p><strong>R$ 12.000.000</strong></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-elegante">
+    <div class="footer-container">
+      <div class="footer-coluna">
+        <h3>EC IMÓVEIS</h3>
+        <p>Desde 2017 oferecendo exclusividade<br>em imóveis de alto padrão.</p>
+      </div>
+      <div class="footer-coluna">
+        <h3>Endereço</h3>
+        <p>Av. Dra Ruth Cardoso, 4797<br>São Paulo - SP • 05477-000</p>
+      </div>
+      <div class="footer-coluna">
+        <h3>Contato</h3>
+        <p>WhatsApp:<br><a href="https://wa.me/5511916298686" target="_blank">(11) 91629-8686</a></p>
+        <p>Email:<br><a href="mailto:carlappestanasantini@gmail.com">carlappestanasantini@gmail.com</a></p>
+      </div>
+    </div>
+    <div class="footer-social-icons">
+      <div class="social-icons">
+        <a href="https://instagram.com/seuperfil" target="_blank" aria-label="Instagram">
+          <img src="images/instagram-bw.png" alt="Instagram">
+        </a>
+        <a href="https://wa.me/5511916298686" target="_blank" aria-label="WhatsApp">
+          <img src="images/whatsapp-bw.png" alt="WhatsApp">
+        </a>
+        <a href="https://tiktok.com/@seuperfil" target="_blank" aria-label="TikTok">
+          <img src="images/tiktok-bw.png" alt="TikTok">
+        </a>
+        <a href="https://youtube.com/@seucanal" target="_blank" aria-label="YouTube">
+          <img src="images/youtube-bw.png" alt="YouTube">
+        </a>
+      </div>
+      <p>&copy; 2025 EC Imóveis — Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

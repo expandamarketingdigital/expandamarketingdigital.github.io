@@ -530,7 +530,27 @@ img:not(.no-filter) {
 img:not(.no-filter):hover {
   filter: grayscale(0%);
 }
+.botao-imoveis {
+  display: inline-block;
+  margin-top: 32px;
+  padding: 14px 36px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background-color: #000;
+  border: 1.5px solid #fff;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: none;
+}
 
+.botao-imoveis:hover,
+.botao-imoveis:focus {
+  background-color: transparent;
+  color: #000;
+  border: 1.5px solid #000;
+}
 .quem-somos-page {
     background-color: #2a2a2a;
     color: #f5f5f5;

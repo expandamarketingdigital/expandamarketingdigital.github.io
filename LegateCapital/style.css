@@ -7,7 +7,7 @@
 body {
   font-family: 'Inter', sans-serif;
   background-color: #fff;
-  color: #1e293b;
+  color: #222;
   line-height: 1.6;
 }
 img {
@@ -39,6 +39,23 @@ a {
 .logo {
   height: 50px;
 }
+
+/* NAVBAR MAIS COMPACTA */
+.navbar {
+  padding-top: 0.2rem !important;
+  padding-bottom: 0.2rem !important;
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+}
+.navbar-nav .nav-link {
+  padding-top: 0.2rem !important;
+  padding-bottom: 0.2rem !important;
+}
+.navbar-brand img {
+  height: 70px !important;
+  max-height: 70px;
+}
 nav {
   display: flex;
   align-items: center;
@@ -65,12 +82,17 @@ nav a:hover {
 .hero {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 54vh;
+  min-height: 264px;
+  max-height: 420px;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  padding-top: 2.9rem; /* margem superior aumentada em 15% */
 }
 .hero-image-wrapper {
   position: relative;
@@ -259,19 +281,154 @@ nav a:hover {
   min-height: 120px;
 }
 
-/* === RODAPÉ === */
-.footer {
+/* === RODAPÉ ELEGANTE === */
+.footer-elegante {
   background: #000;
   color: #fff;
-  text-align: center;
-  padding: 2rem 1rem;
-  font-size: 0.85rem;
+  padding: 2.5rem 1rem 1.2rem 1rem;
+  font-size: 1rem;
+  border-top: none;
+  box-shadow: none;
+  letter-spacing: 0.01em;
+  border-radius: 0 0 8px 8px;
 }
-.footer-flex {
+
+.footer-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: flex-start;
   flex-wrap: wrap;
+  gap: 2.5rem;
+  max-width: 1140px;
+  margin: 0 auto 1.5rem auto;
+  padding-bottom: 1rem;
+  /* border-bottom: 1px solid #222; */ /* Removido para tirar o divisor duplicado */
+}
+
+.footer-coluna {
+  flex: 1 1 220px;
+  min-width: 180px;
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+.footer-coluna h3,
+.footer-coluna p,
+.footer-coluna a {
+  text-align: center;
+}
+
+.footer-coluna h3 {
+  font-size: 1.15rem;
+  color: #fff;
+  margin-bottom: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.footer-coluna p,
+.footer-coluna a {
+  color: #e0e0e0;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+  transition: color 0.2s;
+  text-align: center;
+}
+
+.footer-coluna a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer-social-icons {
+  text-align: center;
+  margin-top: 1.2rem;
+  border-top: 1px solid #222;
+  padding-top: 1.2rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 0.7rem;
+}
+
+.social-icons a {
+  display: inline-flex;
   align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  transition: background 0.18s;
+  position: relative;
+  z-index: 1;
+}
+
+.social-icons a.wave-main img {
+  transform: scale(1.35);
+  filter: grayscale(0) brightness(1.1);
+  z-index: 3;
+}
+.social-icons a.wave-left img,
+.social-icons a.wave-right img {
+  transform: scale(1.18);
+  filter: grayscale(0.2) brightness(1.05);
+  z-index: 2;
+}
+.social-icons a img {
+  transition: transform 0.25s cubic-bezier(.4,2,.6,1), filter 0.2s;
+}
+
+.social-icons a:hover,
+.social-icons a:focus {
+  /* background: rgba(255,255,255,0.08); */ /* Removido para não exibir fundo */
+}
+
+.social-icons img {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  /* background: #111; */ /* Removido para tirar o fundo */
+  padding: 3px;
+  box-shadow: none;
+}
+
+.footer-social-icons p {
+  color: #888;
+  font-size: 0.98rem;
+  margin-top: 0.5rem;
+  letter-spacing: 0.02em;
+}
+
+/* Responsividade do footer elegante */
+@media (max-width: 900px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding-bottom: 0.5rem;
+  }
+  .footer-coluna {
+    min-width: 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-elegante {
+    padding: 1.2rem 0.5rem 0.7rem 0.5rem;
+    font-size: 0.95rem;
+  }
+  .footer-social-icons p {
+    font-size: 0.92rem;
+  }
+  .social-icons img {
+    width: 22px;
+    height: 22px;
+    padding: 2px;
+  }
 }
 .footer .social-links a {
   color: #b91c1c;
@@ -284,33 +441,143 @@ nav a:hover {
 }
 
 /* === RESPONSIVIDADE / MOBILE === */
-@media (max-width: 768px) {
-  .hero-text {
+@media (max-width: 992px) {
+  .container {
+    padding: 1rem;
+  }
+  .navbar-brand img {
+    height: 48px !important;
+    max-height: 48px;
+  }
+  .hero {
+    height: 60vh;
+    min-height: 320px;
+  }
+  .image-text-highlight {
+    height: 340px;
+    background-position: center top;
+  }
+  .overlay-right-text {
     padding: 1.5rem;
+    max-width: 95vw;
+    margin-right: 2vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0.5rem;
+  }
+  .navbar {
+    padding-top: 0.1rem !important;
+    padding-bottom: 0.1rem !important;
+  }
+  .navbar-brand img {
+    height: 40px !important;
+    max-height: 40px;
+  }
+  .navbar-nav .nav-link {
+    padding-top: 0.1rem !important;
+    padding-bottom: 0.1rem !important;
+    font-size: 0.95rem;
+  }
+  .hero {
+    height: 55vh;
+    min-height: 220px;
+    padding: 0;
+  }
+  .hero-text {
+    padding: 1rem 0.5rem;
+    max-width: 95vw;
   }
   .hero-text h2 {
-    font-size: 2rem;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
   }
   .hero-text h2 strong {
-    font-size: 2.3rem;
+    font-size: 1.6rem;
+  }
+  .hero-text .desc {
+    font-size: 0.98rem;
+    margin-bottom: 1rem;
+  }
+  .cta, .cta.ghost, .cta.white {
+    padding: 0.5rem 1rem;
+    font-size: 0.95rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .section {
+    padding: 2.5rem 0.5rem;
+  }
+  .section h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+  .section p {
+    font-size: 0.98rem;
+  }
+  .cards-horizontal {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .card-servico {
+    padding: 1.2rem;
+  }
+  .image-text-highlight {
+    height: 220px;
+    background-position: center top;
+  }
+  .overlay-right-text {
+    padding: 1rem;
+    max-width: 98vw;
+    margin-right: 1vw;
   }
   .footer-flex {
     flex-direction: column;
-    gap: 1rem;
-  }
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
     gap: 0.5rem;
-    margin-top: 1rem;
+    text-align: center;
   }
-  .featured-section {
-    flex-direction: column;
-    align-items: center;
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 45vh;
+    min-height: 140px;
   }
-  .featured-image,
-  .featured-cards {
-    max-width: 100%;
+  .hero-text {
+    padding: 0.5rem 0.2rem;
+    max-width: 99vw;
+  }
+  .hero-text h2 {
+    font-size: 1.05rem;
+  }
+  .hero-text h2 strong {
+    font-size: 1.2rem;
+  }
+  .cta, .cta.ghost, .cta.white {
+    padding: 0.4rem 0.7rem;
+    font-size: 0.9rem;
+    margin-right: 0.3rem;
+    margin-bottom: 0.3rem;
+  }
+  .section {
+    padding: 1.2rem 0.2rem;
+  }
+  .section h3 {
+    font-size: 1.05rem;
+    margin-bottom: 0.7rem;
+  }
+  .section p {
+    font-size: 0.92rem;
+  }
+  .card-servico {
+    padding: 0.7rem;
+  }
+  .overlay-right-text {
+    padding: 0.5rem;
+    max-width: 99vw;
+    margin-right: 0.5vw;
   }
 }
 
@@ -340,7 +607,7 @@ nav a:hover {
 /* === DESTAQUE COM IMAGEM E TEXTO === */
 .image-text-highlight {
   position: relative;
-  background: url('predios.jpg') center center / cover no-repeat;
+  background: url('/LegateCapital/images/predios.jpg') center center / cover no-repeat;
   height: 500px;
   display: flex;
   align-items: center;
@@ -378,7 +645,8 @@ nav a:hover {
 /* === SOBRE COM FUNDO ESCURO === */
 .sobre-section {
   position: relative;
-  padding: 6rem 1.5rem;
+  padding: 3rem 1.5rem 2rem 1.5rem; /* padding superior menor */
+  margin-top: 0; /* gruda na hero */
 }
 .sobre-overlay {
   background: rgba(29, 38, 57, 0.85);
@@ -397,4 +665,85 @@ nav a:hover {
   max-width: 800px;
   margin: 0 auto;
   line-height: 1.6;
+}
+#btn-topo, #btn-rodape {
+  position: fixed;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: #b91c1c;
+  color: #fff;
+  font-size: 1.7rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  cursor: pointer;
+  z-index: 9999;
+  opacity: 0.85;
+  transition: background 0.2s, opacity 0.2s;
+}
+#btn-topo:hover, #btn-rodape:hover {
+  background: #991b1b;
+  opacity: 1;
+}
+#btn-topo {
+  bottom: 80px;
+  display: none;
+}
+#btn-rodape {
+  bottom: 24px;
+}
+.btn-outline-dark {
+  border: 1px solid #222;
+  color: #222;
+  background: #fff;
+}
+.btn-outline-dark:hover {
+  background: #222;
+  color: #fff;
+}
+.btn-outline-secondary {
+  border: 1px solid #bbb;
+  color: #444;
+  background: #fff;
+}
+.btn-outline-secondary:hover {
+  background: #f8f9fa;
+  color: #222;
+}
+html, body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.footer {
+  margin-top: auto;
+}
+
+/* Botão WhatsApp Flutuante */
+.whatsapp-float {
+  position: fixed;
+  width: 56px;
+  height: 56px;
+  bottom: 24px;
+  right: 24px;
+  background: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: background 0.2s;
+}
+.whatsapp-float:hover {
+  background: #128c7e;
+}
+.whatsapp-float img {
+  width: 32px;
+  height: 32px;
 }

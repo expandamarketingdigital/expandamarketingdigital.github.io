@@ -15,7 +15,7 @@
   <nav class="navbar navbar-expand-md bg-dark navbar-dark">
     <div class="container">
       <a class="navbar-brand" href="#">
-        <img src="Legate_LogoBranco.svg" alt="LEGATE CAPITAL" height="60">
+        <img src="/LegateCapital/images/Legate_LogoBranco.svg" alt="LEGATE CAPITAL" height="60">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"
         aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,20 +42,20 @@
   </nav>
 
   <!-- HERO -->
-  <section class="hero">
-    <div class="hero-image-wrapper">
-      <img src="predios-legate.png" alt="Prédios Legate" class="hero-bg-img" />
-      <div class="hero-overlay"></div>
-      <div class="hero-text">
-        <p class="subtitle">LEGATE CAPITAL</p>
-        <h2><strong>Family Office Moderno</strong><br />Foco em independência e segurança</h2>
-        <p class="desc">Soluções financeiras completas para investidores modernos.</p>
-        <a href="#abrir-conta" class="cta">Abrir minha conta</a>
-        <a href="#contato" class="cta ghost">Fale com a gente</a>
+  <section class="hero" style="position: relative; min-height: 340px; background: url('/LegateCapital/images/predios-legate.png') center center/cover no-repeat;">
+    <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(24,25,27,0.35);"></div>
+    <div class="container d-flex flex-column justify-content-center align-items-center" style="min-height: 340px; position: relative; z-index: 2;">
+      <p class="subtitle" style="color: #bbb; font-size: 1rem; margin-bottom: 0.2rem; letter-spacing: 1px;">LEGATE CAPITAL</p>
+      <h2 style="font-size: 2rem; font-weight: 600; margin-bottom: 0.3rem; color: #fff;">Family Office Moderno</h2>
+      <p style="font-size: 1rem; color: #e0e0e0; margin-bottom: 1rem;">Independência e segurança para seu patrimônio.</p>
+      <div>
+        <a href="#abrir-conta" class="btn btn-danger mr-2" style="padding: 0.5rem 1.2rem; font-size: 1rem;">Abrir minha conta</a>
+        <a href="#contato" class="btn btn-outline-light" style="padding: 0.5rem 1.2rem; font-size: 1rem;">Fale com a gente</a>
       </div>
     </div>
   </section>
-
+  <!-- BARRA ESBRANQUIÇADA ABAIXO DO HERO -->
+  <div style="width:100%; height:40px; background: #f8f9fa; border-bottom: 1px solid #e5e5e5;"></div>
   <!-- SOBRE -->
   <section id="sobre" class="sobre-section">
     <div class="sobre-overlay">
@@ -183,20 +183,89 @@
       </form>
     </div>
   </section>
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container footer-flex">
-      <p>© <span id="year"></span> LEGATE CAPITAL. Todos os direitos reservados.</p>
-      <div class="social-links">
-        <a href="#">LinkedIn</a>
-        <a href="#">Instagram</a>
+  <!-- ONDE ESTAMOS + MAPA -->
+  <section class="onde-estamos-section py-5 bg-light">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <h3 class="mb-3">Onde estamos</h3>
+          <p>Nosso escritório está localizado em uma das regiões mais estratégicas de São Paulo, pronto para receber você com toda a comodidade e segurança.</p>
+          <p><strong>Endereço:</strong><br>
+            Av. Paulista, 1000<br>
+            Bela Vista, São Paulo - SP<br>
+            01310-100
+          </p>
+        </div>
+        <div class="col-md-6">
+          <div style="width:100%;height:260px;">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.981857008791!2d-46.65657468440624!3d-23.57008496718892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c7e6b8e5e1%3A0x2e7b7b7b7b7b7b7b!2sAv.%20Paulista%2C%201000%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001310-100!5e0!3m2!1spt-BR!2sbr!4v1680000000000!5m2!1spt-BR!2sbr"
+              width="100%" height="100%" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
       </div>
     </div>
+  </section>
+  <!-- FOOTER ELEGANTE -->
+  <footer class="footer-elegante">
+    <div class="footer-container">
+      <div class="footer-coluna">
+        <a href="/LegateCapital/index.html" aria-label="Ir para a página inicial">
+          <img src="/LegateCapital/images/Legate_LogoBranco.svg" alt="Legate Capital" style="max-width:160px; margin-bottom:0.7rem;">
+        </a>
+        <p>Family Office moderno e independente,<br>focado em segurança e performance.</p>
+      </div>
+      <div class="footer-coluna">
+        <h3>Endereço</h3>
+        <p>Av. Paulista, 1000<br>São Paulo - SP • 01310-100</p>
+      </div>
+      <div class="footer-coluna">
+        <h3>Contato</h3>
+        <p>WhatsApp: <br><a href="https://wa.me/5511975425005" target="_blank">(11) 97542-5005</a></p>
+        <p>Email: <br><a href="mailto:contato@legatecapital.com">contato@legatecapital.com</a></p>
+      </div>
+    </div>
+    <div class="footer-social-icons">
+      <div class="social-icons">
+        <a href="https://instagram.com/seuperfil" target="_blank" aria-label="Instagram">
+          <img src="images/social-icons/instagram-bw%20copy.png" alt="Instagram">
+        </a>
+        <a href="https://wa.me/5511975425005" target="_blank" aria-label="WhatsApp">
+          <img src="images/social-icons/whatsapp-bw%20copy.png" alt="WhatsApp">
+        </a>
+        <a href="https://tiktok.com/@seuperfil" target="_blank" aria-label="TikTok">
+          <img src="images/social-icons/tiktok-bw%20copy.png" alt="TikTok">
+        </a>
+        <a href="https://youtube.com/@seucanal" target="_blank" aria-label="YouTube">
+          <img src="images/social-icons/youtube-bw%20copy.png" alt="YouTube">
+        </a>
+      </div>
+      <p>&copy; 2025 LEGATE CAPITAL — Todos os direitos reservados.</p>
+    </div>
   </footer>
-
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("year") && (document.getElementById("year").textContent = new Date().getFullYear());
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-HoA1Ek04qz1YK3mhYIjL+GblzhD1TxXv/t9m5WUJf5Dptja7zTmr6jNYzMFUgR9i" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <!-- Botões de navegação -->
+  <button id="btn-topo" title="Voltar ao topo">&#8679;</button>
+  <button id="btn-rodape" title="Ir para o rodapé">&#8681;</button>
+  <script src="script.js"></script>
+  <script>
+    // Efeito de onda nos ícones sociais
+    document.querySelectorAll('.social-icons a').forEach((icon, idx, arr) => {
+      icon.addEventListener('mouseenter', () => {
+        icon.classList.add('wave-main');
+        if (arr[idx - 1]) arr[idx - 1].classList.add('wave-left');
+        if (arr[idx + 1]) arr[idx + 1].classList.add('wave-right');
+      });
+      icon.addEventListener('mouseleave', () => {
+        icon.classList.remove('wave-main');
+        if (arr[idx - 1]) arr[idx - 1].classList.remove('wave-left');
+        if (arr[idx + 1]) arr[idx + 1].classList.remove('wave-right');
+      });
+    });
+  </script>
 </body>
 </html>

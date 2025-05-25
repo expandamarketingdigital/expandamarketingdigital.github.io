@@ -4,18 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LEGATE CAPITAL</title>
+  <meta name="description" content="Family Office moderno e independente, focado em segurança e performance." />
+  <meta name="keywords" content="Family Office, investimentos, gestão patrimonial, Legate Capital, São Paulo" />
+  <meta property="og:title" content="LEGATE CAPITAL" />
+  <meta property="og:description" content="Family Office moderno e independente, focado em segurança e performance." />
+  <meta property="og:image" content="/LegateCapital/images/Legate_LogoBranco.png" />
+  <meta property="og:type" content="website" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
    <!-- NAVBAR RESPONSIVO -->
   <nav class="navbar navbar-expand-md bg-dark navbar-dark">
     <div class="container">
       <a class="navbar-brand" href="#">
-        <img src="/LegateCapital/images/Legate_LogoBranco.svg" alt="LEGATE CAPITAL" height="60">
+        <img src="images/Legate_LogoBranco.png" alt="Logo Legate Capital" class="logo-light" height="40">
+        <img src="images/Legate_LogoPreto.png" alt="Logo Legate Capital" class="logo-dark" height="40">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"
         aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,6 +40,7 @@
           <li class="nav-item">
             <a href="#abrir-conta" class="btn btn-danger ml-lg-3">Abrir conta</a>
           </li>
+          <button id="theme-toggle" class="btn btn-light ml-2" style="font-weight:600;">Light/Dark</button>
         </ul>
       </div>
     </div>
@@ -207,6 +212,12 @@
       </div>
     </div>
   </section>
+
+  <!-- Remover este bloco -->
+  <!-- <a href="https://wa.me/5511975425005" class="whatsapp-float-btn" id="whatsapp-float-btn" target="_blank" rel="noopener" aria-label="Conversar no WhatsApp">
+    <img src="/LegateCapital/images/social-icons/WhatsApp_icon.png" alt="WhatsApp" style="width: 56px; height: 56px;" />
+  </a> -->
+
   <!-- FOOTER ELEGANTE -->
   <footer class="footer-elegante">
     <div class="footer-container">
@@ -244,14 +255,16 @@
       <p>&copy; 2025 LEGATE CAPITAL — Todos os direitos reservados.</p>
     </div>
   </footer>
+
   <script>
     document.getElementById("year") && (document.getElementById("year").textContent = new Date().getFullYear());
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-  <!-- Botões de navegação -->
   <button id="btn-topo" title="Voltar ao topo">&#8679;</button>
   <button id="btn-rodape" title="Ir para o rodapé">&#8681;</button>
-  <script src="script.js"></script>
+  <!-- Remove all inline <script> blocks except for the script.js include -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous" defer></script>
+  <script src="script.js" defer></script>
   <script>
     // Efeito de onda nos ícones sociais
     document.querySelectorAll('.social-icons a').forEach((icon, idx, arr) => {
@@ -269,3 +282,47 @@
   </script>
 </body>
 </html>
+<script>
+  const whatsappBtn = document.getElementById('whatsapp-float-btn');
+  const whatsappModal = document.getElementById('whatsapp-modal');
+  const whatsappCancel = document.getElementById('whatsapp-cancel');
+  whatsappBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    whatsappModal.style.display = 'block';
+  });
+  whatsappCancel.addEventListener('click', function() {
+    whatsappModal.style.display = 'none';
+  });
+  // Fecha modal ao clicar fora
+  window.addEventListener('click', function(e) {
+    if (whatsappModal.style.display === 'block' && !whatsappModal.contains(e.target) && e.target !== whatsappBtn) {
+      whatsappModal.style.display = 'none';
+    }
+  });
+</script>
+<script>
+// Get existing whatsapp button reference
+if (!window.whatsappBtn) {
+  window.whatsappBtn = document.getElementById('whatsapp-float-btn');
+}
+let isDragging = false, offsetX = 0, offsetY = 0;
+whatsappBtn.addEventListener('mousedown', function(e) {
+  isDragging = true;
+  offsetX = e.clientX - whatsappBtn.getBoundingClientRect().left;
+  offsetY = e.clientY - whatsappBtn.getBoundingClientRect().top;
+  whatsappBtn.style.transition = 'none';
+});
+document.addEventListener('mousemove', function(e) {
+  if (isDragging) {
+    whatsappBtn.style.left = (e.clientX - offsetX) + 'px';
+    whatsappBtn.style.top = (e.clientY - offsetY) + 'px';
+    whatsappBtn.style.right = 'auto';
+    whatsappBtn.style.bottom = 'auto';
+    whatsappBtn.style.position = 'fixed';
+  }
+});
+document.addEventListener('mouseup', function() {
+  isDragging = false;
+  whatsappBtn.style.transition = '';
+});
+</script>

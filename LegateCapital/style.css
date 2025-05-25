@@ -44,8 +44,10 @@ a {
 .navbar {
   padding-top: 0.2rem !important;
   padding-bottom: 0.2rem !important;
-  position: sticky;
+  position: fixed !important;
   top: 0;
+  left: 0;
+  width: 100%;
   z-index: 1030;
 }
 .navbar-nav .nav-link {
@@ -302,6 +304,7 @@ nav a:hover {
   max-width: 1140px;
   margin: 0 auto 1.5rem auto;
   padding-bottom: 1rem;
+  /* Remove commented-out and duplicate rules, group related styles, and ensure only one definition per selector. */
   /* border-bottom: 1px solid #222; */ /* Removido para tirar o divisor duplicado */
 }
 
@@ -669,81 +672,211 @@ nav a:hover {
 #btn-topo, #btn-rodape {
   position: fixed;
   right: 24px;
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
+  background: #fff;
+  color: #d90429;
   border: none;
   border-radius: 50%;
-  background: #b91c1c;
-  color: #fff;
-  font-size: 1.7rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  font-size: 2rem;
   cursor: pointer;
-  z-index: 9999;
-  opacity: 0.85;
-  transition: background 0.2s, opacity 0.2s;
-}
-#btn-topo:hover, #btn-rodape:hover {
-  background: #991b1b;
-  opacity: 1;
+  z-index: 1002;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #btn-topo {
-  bottom: 80px;
-  display: none;
+  bottom: 84px;
 }
 #btn-rodape {
   bottom: 24px;
 }
-.btn-outline-dark {
-  border: 1px solid #222;
-  color: #222;
-  background: #fff;
-}
-.btn-outline-dark:hover {
-  background: #222;
+#btn-topo:hover, #btn-rodape:hover {
+  background: #d90429;
   color: #fff;
+  box-shadow: 0 4px 16px rgba(217,4,41,0.18);
 }
-.btn-outline-secondary {
-  border: 1px solid #bbb;
-  color: #444;
-  background: #fff;
+@media (max-width: 600px) {
+  #btn-topo, #btn-rodape {
+    right: 12px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+  }
+  #btn-topo {
+    bottom: 70px;
+  }
+  #btn-rodape {
+    bottom: 16px;
+  }
 }
-.btn-outline-secondary:hover {
-  background: #f8f9fa;
-  color: #222;
+.whatsapp-float {
+  right: 24px;
+  left: auto;
+  bottom: 24px;
 }
-html, body {
-  height: 100%;
-}
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-.footer {
-  margin-top: auto;
-}
-
-/* Botão WhatsApp Flutuante */
 .whatsapp-float {
   position: fixed;
-  width: 56px;
-  height: 56px;
-  bottom: 24px;
   right: 24px;
+  bottom: 24px;
+  z-index: 9999;
   background: #25d366;
-  color: #fff;
   border-radius: 50%;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  padding: 8px;
+  transition: box-shadow 0.2s, transform 0.2s;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 9999;
-  transition: background 0.2s;
+  cursor: grab;
 }
-.whatsapp-float:hover {
-  background: #128c7e;
+.whatsapp-float-btn:active {
+  cursor: grabbing;
+}
+.whatsapp-float-btn:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  transform: scale(1.08);
 }
 .whatsapp-float img {
   width: 32px;
   height: 32px;
+}
+body.light-theme {
+  background: #fff;
+  color: #222;
+}
+body.light-theme .header,
+body.light-theme .navbar,
+body.light-theme .footer-elegante {
+  background: #fff !important;
+  color: #222 !important;
+  border-bottom: 1px solid #eee;
+}
+body.light-theme .navbar .nav-link,
+body.light-theme .navbar-brand {
+  color: #222 !important;
+}
+body.light-theme .navbar .nav-link.active,
+body.light-theme .navbar .nav-link:hover {
+  color: #b91c1c !important;
+}
+body.light-theme .hero,
+body.light-theme .authority-section,
+body.light-theme .card-servico,
+body.light-theme .authority-box {
+  background: #f9f9f9 !important;
+  color: #222 !important;
+  border-color: #eee !important;
+}
+body.light-theme .btn,
+body.light-theme .cta {
+  background: #b91c1c !important;
+  color: #fff !important;
+  border: none;
+}
+body.light-theme .btn-outline-light {
+  background: #fff !important;
+  color: #b91c1c !important;
+  border: 1px solid #b91c1c !important;
+}
+body.light-theme .btn-outline-light:hover {
+  background: #b91c1c !important;
+  color: #fff !important;
+}
+body.light-theme .footer-social-icons a {
+  background: #fff !important;
+  color: #b91c1c !important;
+  border: 1px solid #b91c1c !important;
+}
+body.light-theme .footer-social-icons a:hover {
+  background: #b91c1c !important;
+  color: #fff !important;
+}
+body.light-theme #btn-topo,
+body.light-theme #btn-rodape {
+  background: #fff !important;
+  color: #b91c1c !important;
+  border: 1px solid #b91c1c !important;
+}
+body.light-theme #btn-topo:hover,
+body.light-theme #btn-rodape:hover {
+  background: #b91c1c !important;
+  color: #fff !important;
+}
+body.dark-theme {
+  background-color: #18191b;
+  color: #fff;
+}
+.logo-dark { display: none; }
+body.light-theme .logo-dark { display: inline; }
+body.light-theme .logo-light { display: none; }
+/* === AJUSTES DE TEXTO PARA O TEMA CLARO === */
+body.light-theme,
+body.light-theme p,
+body.light-theme span,
+body.light-theme li,
+body.light-theme label,
+body.light-theme input,
+body.light-theme textarea {
+  color: #222 !important;
+}
+body.light-theme h1,
+body.light-theme h2,
+body.light-theme h3,
+body.light-theme h4,
+body.light-theme h5,
+body.light-theme h6 {
+  color: #111 !important;
+}
+body.light-theme .hero-text,
+body.light-theme .hero-text .subtitle,
+body.light-theme .hero-text .desc {
+  color: #222 !important;
+}
+body.light-theme .footer-elegante,
+body.light-theme .footer-coluna h3,
+body.light-theme .footer-coluna p,
+body.light-theme .footer-coluna a,
+body.light-theme .footer-social-icons p {
+  color: #222 !important;
+}
+body.light-theme .sobre-overlay {
+  color: #222 !important;
+  background: rgba(255,255,255,0.85) !important;
+}
+body.light-theme .image-text-highlight,
+body.light-theme .overlay-right-text {
+  color: #222 !important;
+  background: rgba(255,255,255,0.85) !important;
+}
+body.light-theme .featured-card p {
+  color: #444 !important;
+}
+
+/* === AJUSTES DE TEXTO PARA O TEMA ESCURO === */
+body:not(.light-theme) h1,
+body:not(.light-theme) h2,
+body:not(.light-theme) h3,
+body:not(.light-theme) h4,
+body:not(.light-theme) h5,
+body:not(.light-theme) h6,
+body:not(.light-theme) p,
+body:not(.light-theme) span,
+body:not(.light-theme) li,
+body:not(.light-theme) label,
+body:not(.light-theme) input,
+body:not(.light-theme) textarea {
+  color: #fff !important;
+}
+body:not(.light-theme) .footer-elegante,
+body:not(.light-theme) .footer-coluna h3,
+body:not(.light-theme) .footer-coluna p,
+body:not(.light-theme) .footer-coluna a,
+body:not(.light-theme) .footer-social-icons p {
+  color: #fff !important;
+}
+body:not(.light-theme) .featured-card p {
+  color: #e2e8f0 !important;
 }

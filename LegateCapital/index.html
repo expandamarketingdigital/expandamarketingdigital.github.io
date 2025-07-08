@@ -17,9 +17,9 @@
    <!-- NAVBAR RESPONSIVO -->
   <nav class="navbar navbar-expand-md bg-dark navbar-dark">
     <div class="container">
-      <a class="navbar-brand" href="#">
-        <img src="images/Legate_LogoBranco.png" alt="Logo Legate Capital" class="logo-light" height="40">
-        <img src="images/Legate_LogoPreto.png" alt="Logo Legate Capital" class="logo-dark" height="40">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="images/Legate_LogoBranco.png" alt="Legate Capital Logo" class="logo-dark" style="height:40px; display:inline;">
+        <img src="images/Legate_LogoPreto.png" alt="Legate Capital Logo" class="logo-light" style="height:40px; display:none;">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"
         aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,7 +47,7 @@
   </nav>
 
   <!-- HERO -->
-  <section class="hero" style="position: relative; min-height: 340px; background: url('/LegateCapital/images/predios-legate.png') center center/cover no-repeat;">
+  <section class="hero">
     <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(24,25,27,0.35);"></div>
     <div class="container d-flex flex-column justify-content-center align-items-center" style="min-height: 340px; position: relative; z-index: 2;">
       <p class="subtitle" style="color: #bbb; font-size: 1rem; margin-bottom: 0.2rem; letter-spacing: 1px;">LEGATE CAPITAL</p>
@@ -67,12 +67,15 @@
       <div class="container">
         <h3>Sobre a <strong>LEGATE CAPITAL</strong></h3>
         <p>A LEGATE CAPITAL é uma gestora moderna e independente que atua com foco em segurança, performance e transparência.</p>
+        <div class="mt-4 text-center">
+          <a href="about.html" class="btn btn-danger btn-lg" style="font-weight:600; padding: 0.7rem 2.5rem; font-size: 1.2rem;">Saiba mais sobre a Legate Capital</a>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- O QUE FAZEMOS -->
-  <section id="servicos" class="section bg-light">
+  <section id="servicos" class="section bg-light oquefazemos-section">
     <div class="container">
       <h3 class="section-title">O que fazemos</h3>
       <div class="cards-horizontal">
@@ -151,7 +154,7 @@
   <!-- DEPOIMENTOS -->
   <section class="testimonials-section bg-light py-5">
     <div class="container">
-      <h3 class="section-title text-center mb-4">O que dizem nossos clientes</h3>
+      <h3 class="section-title text-center mb-4 testimonials-title">O que dizem nossos clientes</h3>
       <div class="row justify-content-center">
         <div class="col-md-4 mb-4">
           <blockquote class="testimonial p-4 shadow-sm rounded bg-white h-100">
@@ -223,7 +226,8 @@
     <div class="footer-container">
       <div class="footer-coluna">
         <a href="/LegateCapital/index.html" aria-label="Ir para a página inicial">
-          <img src="/LegateCapital/images/Legate_LogoBranco.svg" alt="Legate Capital" style="max-width:160px; margin-bottom:0.7rem;">
+          <img src="/LegateCapital/images/Legate_LogoBranco.svg" alt="Logo Legate branco" class="logo-dark" style="max-width:160px; margin-bottom:0.7rem;">
+          <img src="/LegateCapital/images/Legate_LogoPreto.png" alt="Logo Legate preto" class="logo-light" style="max-width:160px; margin-bottom:0.7rem; display:none;">
         </a>
         <p>Family Office moderno e independente,<br>focado em segurança e performance.</p>
       </div>

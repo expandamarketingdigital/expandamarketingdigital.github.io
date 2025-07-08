@@ -72,6 +72,11 @@ nav a {
 nav a:hover {
   color: #b91c1c;
 }
+
+body:not(.light-theme) .navbar .nav-link:hover {
+  color: #b91c1c !important;
+}
+
 .cta-menu {
   background: #b91c1c;
   padding: 0.5rem 1rem;
@@ -304,8 +309,7 @@ nav a:hover {
   max-width: 1140px;
   margin: 0 auto 1.5rem auto;
   padding-bottom: 1rem;
-  /* Remove commented-out and duplicate rules, group related styles, and ensure only one definition per selector. */
-  /* border-bottom: 1px solid #222; */ /* Removido para tirar o divisor duplicado */
+  
 }
 
 .footer-coluna {
@@ -385,14 +389,14 @@ nav a:hover {
 
 .social-icons a:hover,
 .social-icons a:focus {
-  /* background: rgba(255,255,255,0.08); */ /* Removido para não exibir fundo */
+  
 }
 
 .social-icons img {
   width: 28px;
   height: 28px;
   border-radius: 6px;
-  /* background: #111; */ /* Removido para tirar o fundo */
+  
   padding: 3px;
   box-shadow: none;
 }
@@ -432,6 +436,11 @@ nav a:hover {
     height: 22px;
     padding: 2px;
   }
+}.blockquote-footer {
+  color: #b91c1c !important;
+}
+.dark-theme .blockquote-footer {
+  color: #b91c1c !important;
 }
 .footer .social-links a {
   color: #b91c1c;
@@ -513,6 +522,16 @@ nav a:hover {
   .section {
     padding: 2.5rem 0.5rem;
   }
+
+  .section-title,
+.testimonials-title {
+  color: #b91c1c !important;
+}
+.dark-theme .section-title,
+.dark-theme .testimonials-title {
+  color: #b91c1c !important;
+}
+
   .section h3 {
     font-size: 1.3rem;
     margin-bottom: 1rem;
@@ -809,9 +828,9 @@ body.dark-theme {
   background-color: #18191b;
   color: #fff;
 }
-.logo-dark { display: none; }
-body.light-theme .logo-dark { display: inline; }
-body.light-theme .logo-light { display: none; }
+.logo-dark { display: inline !important; }
+body.light-theme .logo-dark { display: none !important; }
+body.light-theme .logo-light { display: inline !important; }
 /* === AJUSTES DE TEXTO PARA O TEMA CLARO === */
 body.light-theme,
 body.light-theme p,
@@ -879,4 +898,117 @@ body:not(.light-theme) .footer-social-icons p {
 }
 body:not(.light-theme) .featured-card p {
   color: #e2e8f0 !important;
+}
+/* body.light-theme .hero-bg-img,
+body.light-theme .image-text-highlight {
+  filter: none !important;
+  background: none !important;
+} */
+
+body.light-theme .hero-bg-img {
+  filter: blur(4px) brightness(0.8) !important;
+}
+
+/* Deixe o fundo visível no tema claro */
+body.light-theme .image-text-highlight {
+  background: url('/LegateCapital/images/predios.jpg') center center / cover no-repeat !important;
+}
+body.light-theme .overlay-right-text,
+body.light-theme .sobre-overlay {
+  background: rgba(255,255,255,0.85) !important;
+  color: #222 !important;
+}
+body.light-theme .hero-bg-img {
+  filter: blur(4px) brightness(0.8) !important;
+}
+.card-servico h4 {
+  color: #b91c1c;
+  margin-bottom: 0.75rem;
+  font-size: 1.2rem;
+}
+
+/* Exibe apenas o logo correto conforme o tema do sistema */
+.logo-light {
+  display: block;
+}
+
+.logo-dark {
+  display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  .logo-light {
+    display: none;
+  }
+
+  .logo-dark {
+    display: block;
+  }
+}
+
+.titulo-quem-somos {
+  color: #fff !important;
+  text-shadow: 0 2px 8px #000a !important;
+}
+
+body.light-theme .titulo-quem-somos {
+  color: #fff !important;
+  text-shadow: 0 2px 8px #000a !important;
+}
+
+body.light-theme .hero {
+  background: url('/LegateCapital/images/predios-legate.png') center center / cover no-repeat !important;
+}
+
+/* === AJUSTES HERO PARA TEMA CLARO === */
+body.light-theme .hero-bg-img {
+  filter: blur(4px) brightness(0.6) !important;
+}
+body.light-theme .hero-text,
+body.light-theme .hero-text .subtitle,
+body.light-theme .hero-text .desc {
+  color: #fff !important;
+}
+body.light-theme .cta.ghost {
+  background: transparent !important;
+  border: 1px solid #fff !important;
+  color: #fff !important;
+}
+body.light-theme .cta.ghost:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #fff !important;
+}
+
+.hero {
+  background: url('/LegateCapital/images/predios-legate.png') center center / cover no-repeat;
+}
+
+body.light-theme .hero {
+  background: url('/LegateCapital/images/predios-legate.png') center center / cover no-repeat !important;
+}
+
+body.light-theme .hero-text,
+body.light-theme .hero-text .subtitle,
+body.light-theme .hero-text .desc {
+  color: #fff !important;
+}
+
+body.light-theme .cta.ghost {
+  background: transparent !important;
+  border: 1px solid #fff !important;
+  color: #fff !important;
+}
+body.light-theme .cta.ghost:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+.oquefazemos-section {
+  color: #111 !important;
+}
+.oquefazemos-section .card-servico h4 {
+  color: #b91c1c !important;
+}
+.oquefazemos-section,
+.dark-theme .oquefazemos-section,
+.dark-theme .oquefazemos-section p {
+  color: #111 !important;
 }

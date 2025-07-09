@@ -116,6 +116,26 @@ body:not(.light-theme) .navbar .nav-link:hover {
   filter: blur(4px) brightness(0.6);
   z-index: 1;
 }
+/* === SEÇÃO HERO / CAPA === */
+/* ... regras .hero, .hero-bg-img etc ... */
+
+body.light-theme .hero-bg-img {
+  filter: blur(4px) brightness(0.9) !important;
+}
+
+/* ← AQUI, imediatamente após a regra acima, cole: */
+  
+/* Hero texto no modo claro permanece preto para melhor legibilidade */
+body.light-theme .hero-text,
+body.light-theme .hero-text .subtitle,
+body.light-theme .hero-text .desc,
+body.light-theme .hero-text h2,
+body.light-theme .hero-text h2 strong {
+  color: #222 !important;
+  text-shadow: none !important;
+}
+
+
 .hero-overlay {
   position: absolute;
   top: 0;
@@ -1011,4 +1031,13 @@ body.light-theme .cta.ghost:hover {
 .dark-theme .oquefazemos-section,
 .dark-theme .oquefazemos-section p {
   color: #111 !important;
+}
+
+body.light-theme .hero-text,
+body.light-theme .hero-text .subtitle,
+body.light-theme .hero-text .desc,
+body.light-theme .hero-text h2,
+body.light-theme .hero-text h2 strong {
+  color: #fff !important;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
 }

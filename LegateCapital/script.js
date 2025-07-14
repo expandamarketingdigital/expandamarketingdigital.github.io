@@ -71,8 +71,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Scroll to top/bottom buttons
 document.addEventListener('DOMContentLoaded', function() {
-  const btnTopo = document.getElementById('btn-topo');
-  const btnRodape = document.getElementById('btn-rodape');
+  // const btnTopo = document.getElementById('btn-topo');
+  // const btnRodape = document.getElementById('btn-rodape');
   const themeToggle = document.getElementById('theme-toggle');
   themeToggle.addEventListener('click', function() {
     document.body.classList.toggle('light-theme');

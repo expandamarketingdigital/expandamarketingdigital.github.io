@@ -524,6 +524,18 @@ body.light-theme .oquefazemos-section .section-title {
   color: #222 !important;
 }
 
+body.light-theme .oquefazemos-section .card-servico {
+  background: #fff !important;
+  color: #222 !important;
+  padding: 2rem 1.5rem;
+  margin: 1rem 0;
+  border: none !important;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
 /* Dark theme: fundo escuro para "O que fazemos" */
 body.dark-theme .oquefazemos-section {
   background-color: #1a1a1a !important;
@@ -589,6 +601,44 @@ body.dark-theme .onde-estamos-section strong,
 body.dark-theme .onde-estamos-section a {
   color: #fff !important;
   text-align: justify;
+}
+
+
+
+
+/* Seção de autoridade: fundo preto no tema escuro */
+body.dark-theme  .authority-section {
+  background-color: rgba(24,25,27,0.95) !important;
+}
+
+body.dark-theme .authority-box {
+  background-color: rgba(24,25,27,0.95) !important; /* escuro no dark theme */
+}
+
+/* Seção de autoridade: fundo cinza no tema claro */
+body.light-theme .authority-section {
+  background-color: #f1f5f9 !important;
+}
+
+/* Authority section: fundo por tema */
+body.light-theme .authority-box {
+  background-color: #f1f5f9 !important; /* cinza claro no light theme */
+  color: #000 !important;
+}
+/* Light theme: footer com texto preto */
+body.light-theme .footer-elegante,
+body.light-theme .footer-elegante p,
+body.light-theme .footer-elegante a {
+  color: #222 !important;
+}
+
+/* Remover aro vermelho das redes sociais */
+.footer-social-icons .social-icons a {
+  background: none !important;
+  border: none !important;
+}
+.footer-social-icons .social-icons a img {
+  padding: 0 !important;
 }
 
 /* =======================================

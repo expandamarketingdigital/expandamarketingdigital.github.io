@@ -326,6 +326,11 @@
   /* =======================================
      9. TEMAS CLARO E ESCURO
      ======================================= */
+  /* Espaço antes do botão de tema */
+  #theme-toggle {
+    margin-left: 1rem;
+  }
+  
   body.light-theme { background: #fff; color: #222; }
   body.light-theme .header,
   body.light-theme .navbar,

@@ -69,21 +69,48 @@ document.addEventListener('DOMContentLoaded', function() {
   })();
 });
 
-// Scroll to top/bottom buttons
-document.addEventListener('DOMContentLoaded', function() {
-  // const btnTopo = document.getElementById('btn-topo');
-  // const btnRodape = document.getElementById('btn-rodape');
-  const themeToggle = document.getElementById('theme-toggle');
-  themeToggle.addEventListener('click', function() {
+
+document.addEventListener('DOMContentLoaded', () => {
+  const btn = document.getElementById('theme-toggle');
+
+  // Função que aplica o tema e atualiza o texto do botão
+  function updateTheme() {
+    const isLight = document.body.classList.contains('light-theme');
+    if (isLight) {
+      // já está claro, então texto convida ao escuro
+      btn.textContent = 'Modo Escuro';
+    } else {
+      // está escuro, convida ao claro
+      btn.textContent = 'Modo Claro';
+    }
+  }
+
+  // Quando clicar, alterna as classes e atualiza o label
+  btn.addEventListener('click', () => {
     document.body.classList.toggle('light-theme');
     document.body.classList.toggle('dark-theme');
-    // Opcional: salvar preferência no localStorage
-    if(document.body.classList.contains('light-theme')) {
-      localStorage.setItem('theme', 'light');
-    } else {
-      localStorage.setItem('theme', 'dark');
-    }
+    updateTheme();
   });
+
+  // no carregamento, ajusta o texto corretamente
+  updateTheme();
+});
+
+// // Scroll to top/bottom buttons
+// document.addEventListener('DOMContentLoaded', function() {
+//   // const btnTopo = document.getElementById('btn-topo');
+//   // const btnRodape = document.getElementById('btn-rodape');
+//   const themeToggle = document.getElementById('theme-toggle');
+//   themeToggle.addEventListener('click', function() {
+//     document.body.classList.toggle('light-theme');
+//     document.body.classList.toggle('dark-theme');
+//     // Opcional: salvar preferência no localStorage
+//     if(document.body.classList.contains('light-theme')) {
+//       localStorage.setItem('theme', 'light');
+//     } else {
+//       localStorage.setItem('theme', 'dark');
+//     }
+//   });
   // Carregar preferência salva
   const savedTheme = localStorage.getItem('theme');
   if(savedTheme) {
@@ -106,9 +133,11 @@ document.addEventListener('DOMContentLoaded', function() {
       btnRodape.style.display = 'none';
     }
   }
-  window.addEventListener('scroll', checaPosicaoScroll);
-  window.addEventListener('resize', checaPosicaoScroll);
-  checaPosicaoScroll();
-  btnTopo.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
-  btnRodape.onclick = () => window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-});
+
+
+//   window.addEventListener('scroll', checaPosicaoScroll);
+//   window.addEventListener('resize', checaPosicaoScroll);
+//   checaPosicaoScroll();
+//   btnTopo.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+//   btnRodape.onclick = () => window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+// });

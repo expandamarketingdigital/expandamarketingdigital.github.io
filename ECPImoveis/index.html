@@ -1,0 +1,1400 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Properties - Imóveis de Alto Luxo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+        
+        .font-playfair { font-family: 'Playfair Display', serif; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 100%);
+        }
+        
+        .property-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .property-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+        
+        .luxury-border {
+            background: linear-gradient(45deg, #ffffff, #e5e5e5, #ffffff);
+            padding: 1px;
+        }
+        
+        .animate-fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .btn-luxury {
+            background: linear-gradient(135deg, #000000 0%, #333333 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-luxury:hover {
+            background: linear-gradient(135deg, #333333 0%, #000000 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body class="bg-white text-black font-inter">
+    <!-- Header -->
+    <header class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
+        <nav class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="font-playfair text-2xl font-bold">
+                    ECP IMÓVEIS
+                </div>
+                <div class="hidden md:flex space-x-8 font-medium">
+                    <a href="#home" class="hover:text-gray-600 transition-colors">Início</a>
+                    <a href="#properties" class="hover:text-gray-600 transition-colors">Imóveis</a>
+                    <a href="#services" class="hover:text-gray-600 transition-colors">Serviços</a>
+                    <a href="#contact" class="hover:text-gray-600 transition-colors">Contato</a>
+                </div>
+                <button class="btn-luxury text-white px-6 py-2 rounded-sm font-medium">
+                    Consulta Exclusiva
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content Container -->
+    <div id="main-content">
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center">
+        <div class="absolute inset-0 bg-black">
+            <svg class="w-full h-full object-cover opacity-20" viewBox="0 0 1200 800" fill="none">
+                <rect width="1200" height="800" fill="url(#luxury-pattern)"/>
+                <defs>
+                    <pattern id="luxury-pattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+                        <rect width="100" height="100" fill="#000000"/>
+                        <rect x="25" y="25" width="50" height="50" fill="#111111"/>
+                        <circle cx="50" cy="50" r="15" fill="#222222"/>
+                    </pattern>
+                </defs>
+            </svg>
+        </div>
+        <div class="hero-gradient absolute inset-0"></div>
+        <div class="relative z-10 text-center text-white max-w-4xl mx-auto px-6 animate-fade-in">
+            <h1 class="font-playfair text-6xl md:text-7xl font-bold mb-6 leading-tight">
+                IMÓVEIS DE
+                <span class="block">ALTO LUXO</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 font-light leading-relaxed">
+                Propriedades exclusivas em São Paulo e interior para investidores de elite
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="btn-luxury text-white px-8 py-4 rounded-sm font-medium text-lg">
+                    Ver Portfólio Exclusivo
+                </button>
+                <button class="border-2 border-white text-white px-8 py-4 rounded-sm font-medium text-lg hover:bg-white hover:text-black transition-all">
+                    Agendar Visita Privada
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Properties -->
+    <section id="properties" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-playfair text-5xl font-bold mb-6">Propriedades Selecionadas</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Cada propriedade é cuidadosamente selecionada para atender aos mais altos padrões de luxo e exclusividade
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Property 1 -->
+                <div class="property-card bg-white rounded-sm overflow-hidden shadow-lg">
+                    <div class="h-64 bg-gradient-to-br from-gray-800 to-gray-900 relative">
+                        <svg class="w-full h-full object-cover opacity-30" viewBox="0 0 400 300" fill="none">
+                            <rect width="400" height="300" fill="#1a1a1a"/>
+                            <rect x="50" y="50" width="300" height="200" fill="#2a2a2a" stroke="#fff" stroke-width="2"/>
+                            <rect x="80" y="80" width="80" height="60" fill="#3a3a3a"/>
+                            <rect x="180" y="80" width="80" height="60" fill="#3a3a3a"/>
+                            <rect x="280" y="80" width="50" height="140" fill="#3a3a3a"/>
+                            <circle cx="200" cy="200" r="30" fill="#4a4a4a"/>
+                        </svg>
+                        <div class="absolute top-4 left-4 bg-black text-white px-3 py-1 text-sm font-medium">
+                            EXCLUSIVO
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-playfair text-2xl font-bold mb-2">Mansão Alphaville</h3>
+                        <p class="text-gray-600 mb-4">Condomínio fechado de ultra luxo</p>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-sm text-gray-500">1.200m² • 6 suítes • Piscina</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="font-playfair text-2xl font-bold">R$ 8.500.000</span>
+                            <button class="btn-luxury text-white px-4 py-2 rounded-sm text-sm">
+                                Ver Detalhes
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Property 2 -->
+                <div class="property-card bg-white rounded-sm overflow-hidden shadow-lg">
+                    <div class="h-64 bg-gradient-to-br from-gray-700 to-gray-900 relative">
+                        <svg class="w-full h-full object-cover opacity-30" viewBox="0 0 400 300" fill="none">
+                            <rect width="400" height="300" fill="#1a1a1a"/>
+                            <rect x="30" y="100" width="340" height="150" fill="#2a2a2a" stroke="#fff" stroke-width="2"/>
+                            <rect x="60" y="130" width="60" height="40" fill="#3a3a3a"/>
+                            <rect x="140" y="130" width="60" height="40" fill="#3a3a3a"/>
+                            <rect x="220" y="130" width="60" height="40" fill="#3a3a3a"/>
+                            <rect x="300" y="130" width="60" height="40" fill="#3a3a3a"/>
+                            <rect x="150" y="200" width="100" height="30" fill="#4a4a4a"/>
+                        </svg>
+                        <div class="absolute top-4 left-4 bg-black text-white px-3 py-1 text-sm font-medium">
+                            CLUBE DE CAMPO
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-playfair text-2xl font-bold mb-2">Casa Fazenda Itu</h3>
+                        <p class="text-gray-600 mb-4">Propriedade rural de luxo</p>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-sm text-gray-500">5.000m² • 8 suítes • Haras</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="font-playfair text-2xl font-bold">R$ 15.000.000</span>
+                            <button class="btn-luxury text-white px-4 py-2 rounded-sm text-sm">
+                                Ver Detalhes
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Property 3 -->
+                <div class="property-card bg-white rounded-sm overflow-hidden shadow-lg">
+                    <div class="h-64 bg-gradient-to-br from-gray-600 to-gray-900 relative">
+                        <svg class="w-full h-full object-cover opacity-30" viewBox="0 0 400 300" fill="none">
+                            <rect width="400" height="300" fill="#1a1a1a"/>
+                            <rect x="100" y="50" width="200" height="200" fill="#2a2a2a" stroke="#fff" stroke-width="2"/>
+                            <rect x="120" y="70" width="40" height="30" fill="#3a3a3a"/>
+                            <rect x="180" y="70" width="40" height="30" fill="#3a3a3a"/>
+                            <rect x="240" y="70" width="40" height="30" fill="#3a3a3a"/>
+                            <rect x="150" y="120" width="100" height="80" fill="#4a4a4a"/>
+                            <circle cx="200" cy="160" r="20" fill="#5a5a5a"/>
+                        </svg>
+                        <div class="absolute top-4 left-4 bg-black text-white px-3 py-1 text-sm font-medium">
+                            JARDINS
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-playfair text-2xl font-bold mb-2">Penthouse Jardins</h3>
+                        <p class="text-gray-600 mb-4">Vista panorâmica da cidade</p>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-sm text-gray-500">800m² • 4 suítes • Terraço</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="font-playfair text-2xl font-bold">R$ 12.000.000</span>
+                            <button class="btn-luxury text-white px-4 py-2 rounded-sm text-sm">
+                                Ver Detalhes
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-20 bg-black text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-playfair text-5xl font-bold mb-6">Serviços Exclusivos</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Atendimento personalizado para clientes que exigem o melhor
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-8 border border-gray-700 rounded-sm hover:border-white transition-colors">
+                    <div class="w-16 h-16 mx-auto mb-6 bg-white rounded-full flex items-center justify-center">
+                        <svg class="w-8 h-8 text-black" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-playfair text-2xl font-bold mb-4">Consultoria Privada</h3>
+                    <p class="text-gray-300">Análise personalizada de investimentos imobiliários de alto padrão</p>
+                </div>
+                
+                <div class="text-center p-8 border border-gray-700 rounded-sm hover:border-white transition-colors">
+                    <div class="w-16 h-16 mx-auto mb-6 bg-white rounded-full flex items-center justify-center">
+                        <svg class="w-8 h-8 text-black" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-playfair text-2xl font-bold mb-4">Visitas Exclusivas</h3>
+                    <p class="text-gray-300">Agendamento privado com total discrição e conforto</p>
+                </div>
+                
+                <div class="text-center p-8 border border-gray-700 rounded-sm hover:border-white transition-colors">
+                    <div class="w-16 h-16 mx-auto mb-6 bg-white rounded-full flex items-center justify-center">
+                        <svg class="w-8 h-8 text-black" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-playfair text-2xl font-bold mb-4">Documentação Legal</h3>
+                    <p class="text-gray-300">Suporte jurídico completo para transações de alto valor</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="font-playfair text-5xl font-bold mb-6">Contato Exclusivo</h2>
+            <p class="text-xl text-gray-600 mb-12">
+                Entre em contato para uma consulta personalizada sobre nossos imóveis de luxo
+            </p>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="text-center">
+                    <div class="w-12 h-12 mx-auto mb-4 bg-green-600 rounded-full flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold mb-2">WhatsApp VIP</h3>
+                    <p class="text-gray-600">(11) 91629-8686</p>
+                    <button onclick="openWhatsApp()" class="mt-2 bg-green-600 text-white px-4 py-2 rounded-sm text-sm hover:bg-green-700 transition-colors">
+                        Conversar Agora
+                    </button>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-12 h-12 mx-auto mb-4 bg-black rounded-full flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold mb-2">Email Executivo</h3>
+                    <p class="text-gray-600">contato@ecpimoveis.com.br</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-12 h-12 mx-auto mb-4 bg-black rounded-full flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold mb-2">Escritório</h3>
+                    <p class="text-gray-600">Av. Dra Ruth Cardoso, 4797<br>São Paulo - SP</p>
+                </div>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button onclick="openWhatsApp()" class="bg-green-600 text-white px-12 py-4 rounded-sm font-medium text-lg hover:bg-green-700 transition-colors">
+                    Falar no WhatsApp
+                </button>
+                <button class="btn-luxury text-white px-12 py-4 rounded-sm font-medium text-lg">
+                    Agendar Reunião Executiva
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <!-- Coluna 1 - Marca -->
+                <div class="text-center md:text-left">
+                    <div class="font-playfair text-3xl font-bold mb-4">ECP IMÓVEIS</div>
+                    <p class="text-gray-400 leading-relaxed">
+                        Desde 2017 oferecendo exclusividade em imóveis de alto padrão.
+                    </p>
+                </div>
+                
+                <!-- Coluna 2 - Endereço -->
+                <div class="text-center md:text-left">
+                    <h3 class="font-bold text-lg mb-4">Endereço</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Avenida Dra Ruth Cardoso, 4797<br>
+                        São Paulo - SP - 05477000
+                    </p>
+                </div>
+                
+                <!-- Coluna 3 - Contato -->
+                <div class="text-center md:text-left">
+                    <h3 class="font-bold text-lg mb-4">Contato</h3>
+                    <p class="text-gray-400 mb-3">WhatsApp</p>
+                    <button onclick="openWhatsApp()" class="bg-green-600 text-white px-4 py-2 rounded-sm text-sm hover:bg-green-700 transition-colors flex items-center mx-auto md:mx-0">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488"/>
+                        </svg>
+                        (11) 91629-8686
+                    </button>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+                    <div class="mb-4 md:mb-0">
+                        © 2024 ECP Imóveis • Todos os direitos reservados • CRECI: 12345-J
+                    </div>
+                    <div>
+                        Imóveis de luxo para investidores de elite
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+
+    <!-- Property Detail Pages (Hidden by default) -->
+    <div id="property-detail" class="hidden">
+        <!-- Property 1 Detail -->
+        <div id="property-1" class="property-page hidden">
+            <section class="pt-24 pb-12 bg-black text-white">
+                <div class="max-w-7xl mx-auto px-6">
+                    <button onclick="showHomePage()" class="mb-6 text-white hover:text-gray-300 flex items-center">
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+                        </svg>
+                        Voltar ao Portfólio
+                    </button>
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <div class="bg-gray-800 h-96 rounded-sm mb-6 relative overflow-hidden">
+                                <svg class="w-full h-full object-cover opacity-40" viewBox="0 0 600 400" fill="none">
+                                    <rect width="600" height="400" fill="#1a1a1a"/>
+                                    <rect x="50" y="50" width="500" height="300" fill="#2a2a2a" stroke="#fff" stroke-width="3"/>
+                                    <rect x="100" y="100" width="120" height="80" fill="#3a3a3a"/>
+                                    <rect x="250" y="100" width="120" height="80" fill="#3a3a3a"/>
+                                    <rect x="400" y="100" width="80" height="200" fill="#3a3a3a"/>
+                                    <circle cx="300" cy="250" r="40" fill="#4a4a4a"/>
+                                    <rect x="200" y="320" width="200" height="20" fill="#5a5a5a"/>
+                                </svg>
+                                <div class="absolute top-4 left-4 bg-white text-black px-3 py-1 text-sm font-bold">
+                                    EXCLUSIVO
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-3 gap-4">
+                                <div class="bg-gray-800 h-24 rounded-sm opacity-60"></div>
+                                <div class="bg-gray-800 h-24 rounded-sm opacity-60"></div>
+                                <div class="bg-gray-800 h-24 rounded-sm opacity-60"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <h1 class="font-playfair text-5xl font-bold mb-4">Mansão Alphaville</h1>
+                            <p class="text-2xl text-gray-300 mb-6">Condomínio Fechado de Ultra Luxo</p>
+                            <div class="font-playfair text-4xl font-bold mb-8">R$ 8.500.000</div>
+                            
+                            <div class="grid grid-cols-2 gap-6 mb-8">
+                                <div class="text-center p-4 border border-gray-700 rounded-sm">
+                                    <div class="text-2xl font-bold">1.200m²</div>
+                                    <div class="text-gray-400">Área Total</div>
+                                </div>
+                                <div class="text-center p-4 border border-gray-700 rounded-sm">
+                                    <div class="text-2xl font-bold">6</div>
+                                    <div class="text-gray-400">Suítes</div>
+                                </div>
+                                <div class="text-center p-4 border border-gray-700 rounded-sm">
+                                    <div class="text-2xl font-bold">8</div>
+                                    <div class="text-gray-400">Vagas</div>
+                                </div>
+                                <div class="text-center p-4 border border-gray-700 rounded-sm">
+                                    <div class="text-2xl font-bold">2010</div>
+                                    <div class="text-gray-400">Ano</div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex gap-4">
+                                <button class="btn-luxury text-white px-8 py-3 rounded-sm font-medium flex-1">
+                                    Agendar Visita
+                                </button>
+                                <button class="border border-white text-white px-8 py-3 rounded-sm font-medium hover:bg-white hover:text-black transition-all">
+                                    Contato
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="py-16 bg-white">
+                <div class="max-w-7xl mx-auto px-6">
+                    <h2 class="font-playfair text-4xl font-bold mb-8">Características Exclusivas</h2>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-black rounded-full flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-2">Piscina Infinity</h3>
+                                <p class="text-gray-600">Piscina com borda infinita e aquecimento</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-black rounded-full flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-2">Home Theater</h3>
+                                <p class="text-gray-600">Sala de cinema com sistema de som premium</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-black rounded-full flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-2">Adega Climatizada</h3>
+                                <p class="text-gray-600">Espaço para 500 garrafas com controle de temperatura</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Form Section -->
+            <section class="py-16 bg-gray-50">
+                <div class="max-w-4xl mx-auto px-6">
+                    <div class="text-center mb-12">
+                        <h2 class="font-playfair text-4xl font-bold mb-4">Interessado neste imóvel?</h2>
+                        <p class="text-xl text-gray-600">Entre em contato conosco para mais informações ou agende uma visita</p>
+                    </div>
+                    
+                    <div class="grid lg:grid-cols-2 gap-12">
+                        <!-- Contact Form -->
+                        <div class="bg-white p-8 rounded-sm shadow-lg">
+                            <h3 class="font-playfair text-2xl font-bold mb-6">Formulário de Contato</h3>
+                            <form id="contact-form-property-1" class="space-y-6">
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700 mb-2">Nome Completo *</label>
+                                        <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-black focus:border-transparent">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700 mb-2">Telefone *</label>
+                                        <input type="tel" required class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-black focus:border-transparent">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+                                    <input type="email" required class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-black focus:border-transparent">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Tipo de Interesse</label>
+                                    <select class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-black focus:border-transparent">
+                                        <option>Compra</option>
+                                        <option>Investimento</option>
+                                        <option>Informações Gerais</option>
+                                        <option>Visita Agendada</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Mensagem</label>
+                                    <textarea rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-black focus:border-transparent" placeholder="Conte-nos mais sobre seu interesse..."></textarea>
+                                </div>
+                                <button type="submit" class="w-full btn-luxury text-white py-4 rounded-sm font-medium text-lg">
+                                    Enviar Contato
+                                </button>
+                            </form>
+                        </div>
+                        
+                        <!-- Quick Actions -->
+                        <div class="space-y-6">
+                            <div class="bg-white p-8 rounded-sm shadow-lg text-center">
+                                <div class="w-16 h-16 mx-auto mb-4 bg-green-600 rounded-full flex items-center justify-center">
+                                    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488"/>
+                                    </svg>
+                                </div>
+                                <h3 class="font-bold text-xl mb-4">Agendar Visita</h3>
+                                <p class="text-gray-600 mb-6">Agende uma visita exclusiva para conhecer este imóvel pessoalmente</p>
+                                <button onclick="scheduleVisit('Mansão Alphaville')" class="w-full bg-green-600 text-white py-3 rounded-sm font-medium hover:bg-green-700 transition-colors">
+                                    Agendar pelo WhatsApp
+                                </button>
+                            </div>
+                            
+                            <div class="bg-white p-8 rounded-sm shadow-lg text-center">
+                                <div class="w-16 h-16 mx-auto mb-4 bg-black rounded-full flex items-center justify-center">
+                                    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="font-bold text-xl mb-4">Consultoria Especializada</h3>
+                                <p class="text-gray-600 mb-6">Fale com nosso consultor especializado em imóveis de luxo</p>
+                                <button onclick="openWhatsApp()" class="w-full btn-luxury text-white py-3 rounded-sm font-medium">
+                                    Falar com Consultor
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Related Properties -->
+            <section class="py-16 bg-white">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="text-center mb-12">
+                        <h2 class="font-playfair text-4xl font-bold mb-4">Imóveis Relacionados</h2>
+                        <p class="text-xl text-gray-600">Outras propriedades que podem interessar você</p>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <!-- Related Property 1 -->
+                        <div class="property-card bg-white rounded-sm overflow-hidden shadow-lg border">
+                            <div class="h-48 bg-gradient-to-br from-gray-700 to-gray-900 relative">
+                                <svg class="w-full h-full object-cover opacity-30" viewBox="0 0 400 300" fill="none">
+                                    <rect width="400" height="300" fill="#1a1a1a"/>
+                                    <rect x="30" y="100" width="340" height="150" fill="#2a2a2a" stroke="#fff" stroke-width="2"/>
+                                    <rect x="60" y="130" width="60" height="40" fill="#3a3a3a"/>
+                                    <rect x="140" y="130" width="60" height="40" fill="#3a3a3a"/>
+                                    <rect x="220" y="130" width="60" height="40" fill="#3a3a3a"/>
+                                    <rect x="300" y="130" width="60" height="40" fill="#3a3a3a"/>
+                                </svg>
+                                <div class="absolute top-4 left-4 bg-black text-white px-3 py-1 text-sm font-medium">
+                                    CLUBE DE CAMPO
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="font-playfair text-xl font-bold mb-2">Casa Fazenda Itu</h3>
+                                <p class="text-gray-600 mb-3">5.000m² • 8 suítes • Haras</p>
+                                <div class="flex justify-between items-center">
+                                    <span class="font-playfair text-xl font-bold">R$ 15.000.000</span>
+                                    <button onclick="showPropertyDetail(2)" class="btn-luxury text-white px-4 py-2 rounded-sm text-sm">
+                                        Ver Detalhes
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Related Property 2 -->
+                        <div class="property-card bg-white rounded-sm overflow-hidden shadow-lg border">
+                            <div class="h-48 bg-gradient-to-br from-gray-600 to-gray-900 relative">
+                                <svg class="w-full h-full object-cover opacity-30" viewBox="0 0 400 300" fill="none">
+                                    <rect width="400" height="300" fill="#1a1a1a"/>
+                                    <rect x="100" y="50" width="200" height="200" fill="#2a2a2a" stroke="#fff" stroke-width="2"/>
+                                    <rect x="120" y="70" width="40" height="30" fill="#3a3a3a"/>
+                                    <rect x="180" y="70" width="40" height="30" fill="#3a3a3a"/>
+                                    <rect x="240" y="70" width="40" height="30" fill="#3a3a3a"/>
+                                    <rect x="150" y="120" width="100" height="80" fill="#4a4a4a"/>
+                                </svg>
+                                <div class="absolute top-4 left-4 bg-black text-white px-3 py-1 text-sm font-medium">
+                                    JARDINS
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="font-playfair text-xl font-bold mb-2">Penthouse Jardins</h3>
+                                <p class="text-gray-600 mb-3">800m² • 4 suítes • Terraço</p>
+                                <div class="flex justify-between items-center">
+                                    <span class="font-playfair text-xl font-bold">R$ 12.000.000</span>
+                                    <button onclick="showPropertyDetail(3)" class="btn-luxury text-white px-4 py-2 rounded-sm text-sm">
+                                        Ver Detalhes
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="bg-black text-white py-16">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="grid md:grid-cols-3 gap-8 mb-8">
+                        <!-- Coluna 1 - Marca -->
+                        <div class="text-center md:text-left">
+                            <div class="font-playfair text-3xl font-bold mb-4">ECP IMÓVEIS</div>
+                            <p class="text-gray-400 leading-relaxed">
+                                Desde 2017 oferecendo exclusividade em imóveis de alto padrão.
+                            </p>
+                        </div>
+                        
+                        <!-- Coluna 2 - Endereço -->
+                        <div class="text-center md:text-left">
+                            <h3 class="font-bold text-lg mb-4">Endereço</h3>
+                            <p class="text-gray-400 leading-relaxed">
+                                Avenida Dra Ruth Cardoso, 4797<br>
+                                São Paulo - SP - 05477000
+                            </p>
+                        </div>
+                        
+                        <!-- Coluna 3 - Contato -->
+                        <div class="text-center md:text-left">
+                            <h3 class="font-bold text-lg mb-4">Contato</h3>
+                            <p class="text-gray-400 mb-3">WhatsApp</p>
+                            <button onclick="openWhatsApp()" class="bg-green-600 text-white px-4 py-2 rounded-sm text-sm hover:bg-green-700 transition-colors flex items-center mx-auto md:mx-0 mb-4">
+                                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488"/>
+                                </svg>
+                                (11) 91629-8686
+                            </button>
+                            <p class="text-gray-400 text-sm">Email</p>
+                            <p class="text-gray-300">carlappestanasantini@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="border-t border-gray-800 pt-8">
+                        <div class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+                            <div class="mb-4 md:mb-0">
+                                © 2024 ECP Imóveis • Todos os direitos reservados • CRECI: 12345-J
+                            </div>
+                            <div>
+                                Imóveis de luxo para investidores de elite
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <!-- Property 2 Detail -->
+        <div id="property-2" class="property-page hidden">
+            <section class="pt-24 pb-12 bg-black text-white">
+                <div class="max-w-7xl mx-auto px-6">
+                    <button onclick="showHomePage()" class="mb-6 text-white hover:text-gray-300 flex items-center">
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+                        </svg>
+                        Voltar ao Portfólio
+                    </button>
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <div class="bg-gray-800 h-96 rounded-sm mb-6 relative overflow-hidden">
+                                <svg class="w-full h-full object-cover opacity-40" viewBox="0 0 600 400" fill="none">
+                                    <rect width="600" height="400" fill="#1a1a1a"/>
+                                    <rect x="30" y="150" width="540" height="200" fill="#2a2a2a" stroke="#fff" stroke-width="3"/>
+                                    <rect x="80" y="180" width="80" height="60" fill="#3a3a3a"/>
+                                    <rect x="180" y="180" width="80" height="60" fill="#3a3a3a"/>
+                                    <rect x="280" y="180" width="80" height="60" fill="#3a3a3a"/>
+                                    <rect x="380" y="180" width="80" height="60" fill="#3a3a3a"/>
+                                    <rect x="200" y="280" width="200" height="40" fill="#4a4a4a"/>
+                                    <circle cx="300" cy="100" r="30" fill="#5a5a5a"/>
+                                </svg>
+                                <div class="absolute top-4 left-4 bg-white text-black px-3 py-1 text-sm font-bold">
+                                    CLUBE DE CAMPO
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-3 gap-4">
+                                <div class="bg-gray-800 h-24 rounded-sm opacity-60"></div>
+                                <div class="bg-gray-800 h-24 rounded-sm opacity-60"></div>
+                                <div class="bg-gray-800 h-24 rounded-sm opacity-60"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <h1 class="font-playfair text-5xl font-bold mb-4">Casa Fazenda Itu</h1>
+                            <p class="text-2xl text-gray-300 mb-6">Propriedade Rural de Luxo</p>
+                            <div class="font-playfair text-4xl font-bold mb-8">R$ 15.000.000</div>
+                            
+                            <div class="grid grid-cols-2 gap-6 mb-8">
+                                <div class="text-center p-4 border border-gray-700 rounded-sm">
+                                    <div class="text-2xl font-bold">5.000m²</div>
+                                    <div class="text-gray-400">Área Total</div>
+                                </div>
+                                <div class="text-center p-4 border border-gray-700 rounded-sm">
+                                    <div class="text-2xl font-bold">8</div>
+                                    <div class="text-gray-400">Suítes</div>
+                                </div>
+                                <div class="text-center p-4 border border-gray-700 rounded-sm">
+                                    <div class="text-2xl font-bold">15</div>
+                                    <div class="text-gray-400">Vagas</div>
+                                </div>
+                                <div class="text-center p-4 border border-gray-700 rounded-sm">
+                                    <div class="text-2xl font-bold">2015</div>
+                                    <div class="text-gray-400">Ano</div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex gap-4">
+                                <button class="btn-luxury text-white px-8 py-3 rounded-sm font-medium flex-1">
+                                    Agendar Visita
+                                </button>
+                                <button class="border border-white text-white px-8 py-3 rounded-sm font-medium hover:bg-white hover:text-black transition-all">
+                                    Contato
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="py-16 bg-white">
+                <div class="max-w-7xl mx-auto px-6">
+                    <h2 class="font-playfair text-4xl font-bold mb-8">Características Exclusivas</h2>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-black rounded-full flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-2">Haras Completo</h3>
+                                <p class="text-gray-600">Estábulo para 20 cavalos com pista de hipismo</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-black rounded-full flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-2">Lago Artificial</h3>
+                                <p class="text-gray-600">Lago de 2.000m² com deck e área de lazer</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-black rounded-full flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-2">Heliponto</h3>
+                                <p class="text-gray-600">Heliponto privativo com hangar</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Form Section -->
+            <section class="py-16 bg-gray-50">
+                <div class="max-w-4xl mx-auto px-6">
+                    <div class="text-center mb-12">
+                        <h2 class="font-playfair text-4xl font-bold mb-4">Interessado neste imóvel?</h2>
+                        <p class="text-xl text-gray-600">Entre em contato conosco para mais informações ou agende uma visita</p>
+                    </div>
+                    
+                    <div class="grid lg:grid-cols-2 gap-12">
+                        <!-- Contact Form -->
+                        <div class="bg-white p-8 rounded-sm shadow-lg">
+                            <h3 class="font-playfair text-2xl font-bold mb-6">Formulário de Contato</h3>
+                            <form id="contact-form-property-2" class="space-y-6">
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700 mb-2">Nome Completo *</label>
+                                        <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-black focus:border-transparent">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700 mb-2">Telefone *</label>
+                                        <input type="tel" required class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-black focus:border-transparent">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+                                    <input type="email" required class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-black focus:border-transparent">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Tipo de Interesse</label>
+                                    <select class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-black focus:border-transparent">
+                                        <option>Compra</option>
+                                        <option>Investimento</option>
+                                        <option>Informações Gerais</option>
+                                        <option>Visita Agendada</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Mensagem</label>
+                                    <textarea rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-black focus:border-transparent" placeholder="Conte-nos mais sobre seu interesse..."></textarea>
+                                </div>
+                                <button type="submit" class="w-full btn-luxury text-white py-4 rounded-sm font-medium text-lg">
+                                    Enviar Contato
+                                </button>
+                            </form>
+                        </div>
+                        
+                        <!-- Quick Actions -->
+                        <div class="space-y-6">
+                            <div class="bg-white p-8 rounded-sm shadow-lg text-center">
+                                <div class="w-16 h-16 mx-auto mb-4 bg-green-600 rounded-full flex items-center justify-center">
+                                    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488"/>
+                                    </svg>
+                                </div>
+                                <h3 class="font-bold text-xl mb-4">Agendar Visita</h3>
+                                <p class="text-gray-600 mb-6">Agende uma visita exclusiva para conhecer este imóvel pessoalmente</p>
+                                <button onclick="scheduleVisit('Casa Fazenda Itu')" class="w-full bg-green-600 text-white py-3 rounded-sm font-medium hover:bg-green-700 transition-colors">
+                                    Agendar pelo WhatsApp
+                                </button>
+                            </div>
+                            
+                            <div class="bg-white p-8 rounded-sm shadow-lg text-center">
+                                <div class="w-16 h-16 mx-auto mb-4 bg-black rounded-full flex items-center justify-center">
+                                    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="font-bold text-xl mb-4">Consultoria Especializada</h3>
+                                <p class="text-gray-600 mb-6">Fale com nosso consultor especializado em imóveis de luxo</p>
+                                <button onclick="openWhatsApp()" class="w-full btn-luxury text-white py-3 rounded-sm font-medium">
+                                    Falar com Consultor
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Related Properties -->
+            <section class="py-16 bg-white">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="text-center mb-12">
+                        <h2 class="font-playfair text-4xl font-bold mb-4">Imóveis Relacionados</h2>
+                        <p class="text-xl text-gray-600">Outras propriedades que podem interessar você</p>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <!-- Related Property 1 -->
+                        <div class="property-card bg-white rounded-sm overflow-hidden shadow-lg border">
+                            <div class="h-48 bg-gradient-to-br from-gray-800 to-gray-900 relative">
+                                <svg class="w-full h-full object-cover opacity-30" viewBox="0 0 400 300" fill="none">
+                                    <rect width="400" height="300" fill="#1a1a1a"/>
+                                    <rect x="50" y="50" width="300" height="200" fill="#2a2a2a" stroke="#fff" stroke-width="2"/>
+                                    <rect x="80" y="80" width="80" height="60" fill="#3a3a3a"/>
+                                    <rect x="180" y="80" width="80" height="60" fill="#3a3a3a"/>
+                                    <rect x="280" y="80" width="50" height="140" fill="#3a3a3a"/>
+                                    <circle cx="200" cy="200" r="30" fill="#4a4a4a"/>
+                                </svg>
+                                <div class="absolute top-4 left-4 bg-black text-white px-3 py-1 text-sm font-medium">
+                                    EXCLUSIVO
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="font-playfair text-xl font-bold mb-2">Mansão Alphaville</h3>
+                                <p class="text-gray-600 mb-3">1.200m² • 6 suítes • Piscina</p>
+                                <div class="flex justify-between items-center">
+                                    <span class="font-playfair text-xl font-bold">R$ 8.500.000</span>
+                                    <button onclick="showPropertyDetail(1)" class="btn-luxury text-white px-4 py-2 rounded-sm text-sm">
+                                        Ver Detalhes
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Related Property 2 -->
+                        <div class="property-card bg-white rounded-sm overflow-hidden shadow-lg border">
+                            <div class="h-48 bg-gradient-to-br from-gray-600 to-gray-900 relative">
+                                <svg class="w-full h-full object-cover opacity-30" viewBox="0 0 400 300" fill="none">
+                                    <rect width="400" height="300" fill="#1a1a1a"/>
+                                    <rect x="100" y="50" width="200" height="200" fill="#2a2a2a" stroke="#fff" stroke-width="2"/>
+                                    <rect x="120" y="70" width="40" height="30" fill="#3a3a3a"/>
+                                    <rect x="180" y="70" width="40" height="30" fill="#3a3a3a"/>
+                                    <rect x="240" y="70" width="40" height="30" fill="#3a3a3a"/>
+                                    <rect x="150" y="120" width="100" height="80" fill="#4a4a4a"/>
+                                </svg>
+                                <div class="absolute top-4 left-4 bg-black text-white px-3 py-1 text-sm font-medium">
+                                    JARDINS
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="font-playfair text-xl font-bold mb-2">Penthouse Jardins</h3>
+                                <p class="text-gray-600 mb-3">800m² • 4 suítes • Terraço</p>
+                                <div class="flex justify-between items-center">
+                                    <span class="font-playfair text-xl font-bold">R$ 12.000.000</span>
+                                    <button onclick="showPropertyDetail(3)" class="btn-luxury text-white px-4 py-2 rounded-sm text-sm">
+                                        Ver Detalhes
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="bg-black text-white py-16">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="grid md:grid-cols-3 gap-8 mb-8">
+                        <!-- Coluna 1 - Marca -->
+                        <div class="text-center md:text-left">
+                            <div class="font-playfair text-3xl font-bold mb-4">ECP IMÓVEIS</div>
+                            <p class="text-gray-400 leading-relaxed">
+                                Desde 2017 oferecendo exclusividade em imóveis de alto padrão.
+                            </p>
+                        </div>
+                        
+                        <!-- Coluna 2 - Endereço -->
+                        <div class="text-center md:text-left">
+                            <h3 class="font-bold text-lg mb-4">Endereço</h3>
+                            <p class="text-gray-400 leading-relaxed">
+                                Avenida Dra Ruth Cardoso, 4797<br>
+                                São Paulo - SP - 05477000
+                            </p>
+                        </div>
+                        
+                        <!-- Coluna 3 - Contato -->
+                        <div class="text-center md:text-left">
+                            <h3 class="font-bold text-lg mb-4">Contato</h3>
+                            <p class="text-gray-400 mb-3">WhatsApp</p>
+                            <button onclick="openWhatsApp()" class="bg-green-600 text-white px-4 py-2 rounded-sm text-sm hover:bg-green-700 transition-colors flex items-center mx-auto md:mx-0 mb-4">
+                                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488"/>
+                                </svg>
+                                (11) 91629-8686
+                            </button>
+                            <p class="text-gray-400 text-sm">Email</p>
+                            <p class="text-gray-300">carlappestanasantini@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="border-t border-gray-800 pt-8">
+                        <div class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+                            <div class="mb-4 md:mb-0">
+                                © 2024 ECP Imóveis • Todos os direitos reservados • CRECI: 12345-J
+                            </div>
+                            <div>
+                                Imóveis de luxo para investidores de elite
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <!-- Property 3 Detail -->
+        <div id="property-3" class="property-page hidden">
+            <section class="pt-24 pb-12 bg-black text-white">
+                <div class="max-w-7xl mx-auto px-6">
+                    <button onclick="showHomePage()" class="mb-6 text-white hover:text-gray-300 flex items-center">
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+                        </svg>
+                        Voltar ao Portfólio
+                    </button>
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <div class="bg-gray-800 h-96 rounded-sm mb-6 relative overflow-hidden">
+                                <svg class="w-full h-full object-cover opacity-40" viewBox="0 0 600 400" fill="none">
+                                    <rect width="600" height="400" fill="#1a1a1a"/>
+                                    <rect x="150" y="50" width="300" height="300" fill="#2a2a2a" stroke="#fff" stroke-width="3"/>
+                                    <rect x="180" y="80" width="60" height="45" fill="#3a3a3a"/>
+                                    <rect x="270" y="80" width="60" height="45" fill="#3a3a3a"/>
+                                    <rect x="360" y="80" width="60" height="45" fill="#3a3a3a"/>
+                                    <rect x="200" y="150" width="200" height="120" fill="#4a4a4a"/>
+                                    <circle cx="300" cy="210" r="30" fill="#5a5a5a"/>
+                                    <rect x="220" y="300" width="160" height="30" fill="#6a6a6a"/>
+                                </svg>
+                                <div class="absolute top-4 left-4 bg-white text-black px-3 py-1 text-sm font-bold">
+                                    JARDINS
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-3 gap-4">
+                                <div class="bg-gray-800 h-24 rounded-sm opacity-60"></div>
+                                <div class="bg-gray-800 h-24 rounded-sm opacity-60"></div>
+                                <div class="bg-gray-800 h-24 rounded-sm opacity-60"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <h1 class="font-playfair text-5xl font-bold mb-4">Penthouse Jardins</h1>
+                            <p class="text-2xl text-gray-300 mb-6">Vista Panorâmica da Cidade</p>
+                            <div class="font-playfair text-4xl font-bold mb-8">R$ 12.000.000</div>
+                            
+                            <div class="grid grid-cols-2 gap-6 mb-8">
+                                <div class="text-center p-4 border border-gray-700 rounded-sm">
+                                    <div class="text-2xl font-bold">800m²</div>
+                                    <div class="text-gray-400">Área Total</div>
+                                </div>
+                                <div class="text-center p-4 border border-gray-700 rounded-sm">
+                                    <div class="text-2xl font-bold">4</div>
+                                    <div class="text-gray-400">Suítes</div>
+                                </div>
+                                <div class="text-center p-4 border border-gray-700 rounded-sm">
+                                    <div class="text-2xl font-bold">6</div>
+                                    <div class="text-gray-400">Vagas</div>
+                                </div>
+                                <div class="text-center p-4 border border-gray-700 rounded-sm">
+                                    <div class="text-2xl font-bold">2018</div>
+                                    <div class="text-gray-400">Ano</div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex gap-4">
+                                <button class="btn-luxury text-white px-8 py-3 rounded-sm font-medium flex-1">
+                                    Agendar Visita
+                                </button>
+                                <button class="border border-white text-white px-8 py-3 rounded-sm font-medium hover:bg-white hover:text-black transition-all">
+                                    Contato
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="py-16 bg-white">
+                <div class="max-w-7xl mx-auto px-6">
+                    <h2 class="font-playfair text-4xl font-bold mb-8">Características Exclusivas</h2>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-black rounded-full flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-2">Terraço 360°</h3>
+                                <p class="text-gray-600">Terraço com vista panorâmica de 200m²</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-black rounded-full flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-2">Elevador Privativo</h3>
+                                <p class="text-gray-600">Acesso direto ao apartamento</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-black rounded-full flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-2">Spa Privativo</h3>
+                                <p class="text-gray-600">Sauna, hidromassagem e sala de massagem</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Form Section -->
+            <section class="py-16 bg-gray-50">
+                <div class="max-w-4xl mx-auto px-6">
+                    <div class="text-center mb-12">
+                        <h2 class="font-playfair text-4xl font-bold mb-4">Interessado neste imóvel?</h2>
+                        <p class="text-xl text-gray-600">Entre em contato conosco para mais informações ou agende uma visita</p>
+                    </div>
+                    
+                    <div class="grid lg:grid-cols-2 gap-12">
+                        <!-- Contact Form -->
+                        <div class="bg-white p-8 rounded-sm shadow-lg">
+                            <h3 class="font-playfair text-2xl font-bold mb-6">Formulário de Contato</h3>
+                            <form id="contact-form-property-3" class="space-y-6">
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700 mb-2">Nome Completo *</label>
+                                        <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-black focus:border-transparent">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700 mb-2">Telefone *</label>
+                                        <input type="tel" required class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-black focus:border-transparent">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+                                    <input type="email" required class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-black focus:border-transparent">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Tipo de Interesse</label>
+                                    <select class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-black focus:border-transparent">
+                                        <option>Compra</option>
+                                        <option>Investimento</option>
+                                        <option>Informações Gerais</option>
+                                        <option>Visita Agendada</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Mensagem</label>
+                                    <textarea rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-black focus:border-transparent" placeholder="Conte-nos mais sobre seu interesse..."></textarea>
+                                </div>
+                                <button type="submit" class="w-full btn-luxury text-white py-4 rounded-sm font-medium text-lg">
+                                    Enviar Contato
+                                </button>
+                            </form>
+                        </div>
+                        
+                        <!-- Quick Actions -->
+                        <div class="space-y-6">
+                            <div class="bg-white p-8 rounded-sm shadow-lg text-center">
+                                <div class="w-16 h-16 mx-auto mb-4 bg-green-600 rounded-full flex items-center justify-center">
+                                    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488"/>
+                                    </svg>
+                                </div>
+                                <h3 class="font-bold text-xl mb-4">Agendar Visita</h3>
+                                <p class="text-gray-600 mb-6">Agende uma visita exclusiva para conhecer este imóvel pessoalmente</p>
+                                <button onclick="scheduleVisit('Penthouse Jardins')" class="w-full bg-green-600 text-white py-3 rounded-sm font-medium hover:bg-green-700 transition-colors">
+                                    Agendar pelo WhatsApp
+                                </button>
+                            </div>
+                            
+                            <div class="bg-white p-8 rounded-sm shadow-lg text-center">
+                                <div class="w-16 h-16 mx-auto mb-4 bg-black rounded-full flex items-center justify-center">
+                                    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="font-bold text-xl mb-4">Consultoria Especializada</h3>
+                                <p class="text-gray-600 mb-6">Fale com nosso consultor especializado em imóveis de luxo</p>
+                                <button onclick="openWhatsApp()" class="w-full btn-luxury text-white py-3 rounded-sm font-medium">
+                                    Falar com Consultor
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Related Properties -->
+            <section class="py-16 bg-white">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="text-center mb-12">
+                        <h2 class="font-playfair text-4xl font-bold mb-4">Imóveis Relacionados</h2>
+                        <p class="text-xl text-gray-600">Outras propriedades que podem interessar você</p>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <!-- Related Property 1 -->
+                        <div class="property-card bg-white rounded-sm overflow-hidden shadow-lg border">
+                            <div class="h-48 bg-gradient-to-br from-gray-800 to-gray-900 relative">
+                                <svg class="w-full h-full object-cover opacity-30" viewBox="0 0 400 300" fill="none">
+                                    <rect width="400" height="300" fill="#1a1a1a"/>
+                                    <rect x="50" y="50" width="300" height="200" fill="#2a2a2a" stroke="#fff" stroke-width="2"/>
+                                    <rect x="80" y="80" width="80" height="60" fill="#3a3a3a"/>
+                                    <rect x="180" y="80" width="80" height="60" fill="#3a3a3a"/>
+                                    <rect x="280" y="80" width="50" height="140" fill="#3a3a3a"/>
+                                    <circle cx="200" cy="200" r="30" fill="#4a4a4a"/>
+                                </svg>
+                                <div class="absolute top-4 left-4 bg-black text-white px-3 py-1 text-sm font-medium">
+                                    EXCLUSIVO
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="font-playfair text-xl font-bold mb-2">Mansão Alphaville</h3>
+                                <p class="text-gray-600 mb-3">1.200m² • 6 suítes • Piscina</p>
+                                <div class="flex justify-between items-center">
+                                    <span class="font-playfair text-xl font-bold">R$ 8.500.000</span>
+                                    <button onclick="showPropertyDetail(1)" class="btn-luxury text-white px-4 py-2 rounded-sm text-sm">
+                                        Ver Detalhes
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Related Property 2 -->
+                        <div class="property-card bg-white rounded-sm overflow-hidden shadow-lg border">
+                            <div class="h-48 bg-gradient-to-br from-gray-700 to-gray-900 relative">
+                                <svg class="w-full h-full object-cover opacity-30" viewBox="0 0 400 300" fill="none">
+                                    <rect width="400" height="300" fill="#1a1a1a"/>
+                                    <rect x="30" y="100" width="340" height="150" fill="#2a2a2a" stroke="#fff" stroke-width="2"/>
+                                    <rect x="60" y="130" width="60" height="40" fill="#3a3a3a"/>
+                                    <rect x="140" y="130" width="60" height="40" fill="#3a3a3a"/>
+                                    <rect x="220" y="130" width="60" height="40" fill="#3a3a3a"/>
+                                    <rect x="300" y="130" width="60" height="40" fill="#3a3a3a"/>
+                                </svg>
+                                <div class="absolute top-4 left-4 bg-black text-white px-3 py-1 text-sm font-medium">
+                                    CLUBE DE CAMPO
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="font-playfair text-xl font-bold mb-2">Casa Fazenda Itu</h3>
+                                <p class="text-gray-600 mb-3">5.000m² • 8 suítes • Haras</p>
+                                <div class="flex justify-between items-center">
+                                    <span class="font-playfair text-xl font-bold">R$ 15.000.000</span>
+                                    <button onclick="showPropertyDetail(2)" class="btn-luxury text-white px-4 py-2 rounded-sm text-sm">
+                                        Ver Detalhes
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="bg-black text-white py-16">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="grid md:grid-cols-3 gap-8 mb-8">
+                        <!-- Coluna 1 - Marca -->
+                        <div class="text-center md:text-left">
+                            <div class="font-playfair text-3xl font-bold mb-4">ECP IMÓVEIS</div>
+                            <p class="text-gray-400 leading-relaxed">
+                                Desde 2017 oferecendo exclusividade em imóveis de alto padrão.
+                            </p>
+                        </div>
+                        
+                        <!-- Coluna 2 - Endereço -->
+                        <div class="text-center md:text-left">
+                            <h3 class="font-bold text-lg mb-4">Endereço</h3>
+                            <p class="text-gray-400 leading-relaxed">
+                                Avenida Dra Ruth Cardoso, 4797<br>
+                                São Paulo - SP - 05477000
+                            </p>
+                        </div>
+                        
+                        <!-- Coluna 3 - Contato -->
+                        <div class="text-center md:text-left">
+                            <h3 class="font-bold text-lg mb-4">Contato</h3>
+                            <p class="text-gray-400 mb-3">WhatsApp</p>
+                            <button onclick="openWhatsApp()" class="bg-green-600 text-white px-4 py-2 rounded-sm text-sm hover:bg-green-700 transition-colors flex items-center mx-auto md:mx-0 mb-4">
+                                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488"/>
+                                </svg>
+                                (11) 91629-8686
+                            </button>
+                            <p class="text-gray-400 text-sm">Email</p>
+                            <p class="text-gray-300">carlappestanasantini@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="border-t border-gray-800 pt-8">
+                        <div class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+                            <div class="mb-4 md:mb-0">
+                                © 2024 ECP Imóveis • Todos os direitos reservados • CRECI: 12345-J
+                            </div>
+                            <div>
+                                Imóveis de luxo para investidores de elite
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        // Page navigation functions
+        function showPropertyDetail(propertyId) {
+            document.getElementById('main-content').classList.add('hidden');
+            document.getElementById('property-detail').classList.remove('hidden');
+            document.getElementById('property-' + propertyId).classList.remove('hidden');
+            window.scrollTo(0, 0);
+        }
+
+        function showHomePage() {
+            document.getElementById('property-detail').classList.add('hidden');
+            document.querySelectorAll('.property-page').forEach(page => {
+                page.classList.add('hidden');
+            });
+            document.getElementById('main-content').classList.remove('hidden');
+            window.scrollTo(0, 0);
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // WhatsApp function
+        function openWhatsApp() {
+            const phoneNumber = '5511916298686';
+            const message = 'Olá! Tenho interesse em conhecer os imóveis de alto luxo da ECP Imóveis.';
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // Schedule visit function
+        function scheduleVisit(propertyName) {
+            const phoneNumber = '5511916298686';
+            const message = `Olá! Gostaria de agendar uma visita para o imóvel: ${propertyName}. Quando seria possível?`;
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // Form submission handlers
+        document.addEventListener('submit', function(e) {
+            if (e.target.id && e.target.id.startsWith('contact-form-property')) {
+                e.preventDefault();
+                
+                const formData = new FormData(e.target);
+                const nome = e.target.querySelector('input[type="text"]').value;
+                const telefone = e.target.querySelector('input[type="tel"]').value;
+                const email = e.target.querySelector('input[type="email"]').value;
+                const interesse = e.target.querySelector('select').value;
+                const mensagem = e.target.querySelector('textarea').value;
+                
+                // Get property name from the current page
+                const propertyTitle = document.querySelector('.property-page:not(.hidden) h1');
+                const propertyName = propertyTitle ? propertyTitle.textContent : 'Imóvel de Luxo';
+                
+                // Create WhatsApp message
+                const whatsappMessage = `*CONTATO - ${propertyName}*\n\n` +
+                    `*Nome:* ${nome}\n` +
+                    `*Telefone:* ${telefone}\n` +
+                    `*Email:* ${email}\n` +
+                    `*Interesse:* ${interesse}\n` +
+                    `*Mensagem:* ${mensagem || 'Não informada'}`;
+                
+                const phoneNumber = '5511916298686';
+                const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+                
+                // Show success message
+                alert('Formulário enviado! Você será redirecionado para o WhatsApp para finalizar o contato.');
+                
+                // Open WhatsApp
+                window.open(whatsappUrl, '_blank');
+                
+                // Reset form
+                e.target.reset();
+            }
+        });
+
+        // Button interactions
+        document.addEventListener('click', function(e) {
+            const button = e.target.closest('button');
+            if (!button) return;
+
+            if (button.textContent.includes('Ver Detalhes')) {
+                // Find which property card this button belongs to
+                const propertyCard = button.closest('.property-card');
+                const propertyCards = Array.from(document.querySelectorAll('.property-card'));
+                const propertyIndex = propertyCards.indexOf(propertyCard) + 1;
+                showPropertyDetail(propertyIndex);
+            } else if (button.textContent.includes('Consulta') || button.textContent.includes('Reunião')) {
+                alert('Entrando em contato com nosso time executivo...');
+            } else if (button.textContent.includes('Portfólio')) {
+                document.querySelector('#properties').scrollIntoView({ behavior: 'smooth' });
+            } else if (button.textContent.includes('Visita') && !button.onclick) {
+                alert('Agendando visita privada...');
+            } else if (button.textContent.includes('Contato') && !button.type) {
+                alert('Entrando em contato com consultor especializado...');
+            }
+        });
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.classList.add('bg-white');
+                header.classList.remove('bg-white/95');
+            } else {
+                header.classList.add('bg-white/95');
+                header.classList.remove('bg-white');
+            }
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96e2bb7494edca69',t:'MTc1NTAzMDY0NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quinta da Baroneza — Casa Vista Panorâmica | EC Imóveis</title>
+  <meta name="description" content="Casa de alto padrão na Quinta da Baroneza: 5 suítes, 820m², piscina aquecida, gourmet integrado e vista panorâmica. Conheça a apresentação completa.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="EC Imóveis">
+
+  <meta property="og:title" content="Quinta da Baroneza — Casa Vista Panorâmica | EC Imóveis">
+  <meta property="og:description" content="5 suítes, 820m², piscina, gourmet e vista para a mata. Veja fotos e vídeo.">
+  <meta property="og:image" content="https://www.ecimoveis.com.br/images/baroneza/1.jpg">
+  <meta property="og:url" content="https://www.ecimoveis.com.br/imovel-baroneza-1.html">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preload" as="image" href="/ECImoveis/images/baroneza/1.jpg">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <style>
+    /* HERO */
+    .detalhe-hero {
+      position: relative;
+      min-height: 50vh;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      color: #fff;
+      background: url('/ECImoveis/images/baroneza/1.jpg') center/cover no-repeat;
+      filter: grayscale(100%);
+    }
+    .detalhe-hero::after {
+      content: "";
+      position: absolute; inset: 0;
+      background: rgba(0,0,0,.45);
+    }
+    .detalhe-hero .wrap {
+      position: relative; z-index: 1; padding: 40px 16px;
+    }
+    .detalhe-hero h1 { font-size: clamp(28px, 3vw, 44px); margin-bottom: 8px; }
+    .detalhe-hero .sub { color: #ddd; font-size: 0.95rem; }
+
+    /* BREADCRUMB */
+    .breadcrumb-min {
+      width: 90%; max-width: 1200px; margin: 24px auto 0; color: #999; font-size: .9rem;
+    }
+    .breadcrumb-min a { color: #999; text-decoration: none; border-bottom: 1px solid transparent; }
+    .breadcrumb-min a:hover { color:#fff; border-color:#fff; }
+
+    /* GRID PRINCIPAL */
+    .detalhe-grid {
+      width: 90%; max-width: 1200px; margin: 32px auto 80px;
+      display: grid; grid-template-columns: 1.6fr .8fr; gap: 40px;
+    }
+    @media (max-width: 992px){ .detalhe-grid{ grid-template-columns: 1fr; } }
+
+    /* GALERIA */
+    .galeria-imovel { filter: grayscale(100%); }
+    .galeria-imovel:hover { filter: grayscale(0%); transition: filter .4s ease; }
+    .swiper.main { width: 100%; height: clamp(320px, 60vh, 640px); border-radius: 10px; overflow: hidden; background:#000; }
+    .swiper.main .swiper-slide img, .swiper.main .swiper-slide video { width:100%; height:100%; object-fit: cover; display:block; }
+    .swiper.thumbs { margin-top: 12px; height: 110px; }
+    .swiper.thumbs .swiper-slide { opacity: .5; cursor: pointer; border-radius: 8px; overflow: hidden; }
+    .swiper.thumbs .swiper-slide-thumb-active { opacity: 1; }
+    .swiper.thumbs img { width:100%; height:100%; object-fit: cover; display:block; filter: grayscale(100%); transition: filter .3s ease; }
+    .swiper.thumbs .swiper-slide-thumb-active img, .swiper.thumbs .swiper-slide:hover img { filter: grayscale(0%); }
+
+    /* LATERAL (DETALHES + CTA) */
+    .painel-lateral { background:#0f0f0f; color:#eee; border:1px solid #222; border-radius: 10px; padding: 24px; position: sticky; top: 90px; }
+    .painel-lateral h3 { font-size: 1.2rem; margin-bottom: 12px; color:#fff; }
+    .fatos {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap:12px; margin-bottom: 16px;
+    }
+    .fatos div { background:#151515; border:1px solid #222; border-radius:8px; padding:12px; }
+    .fatos strong { display:block; color:#fff; font-size:.95rem; }
+    .fatos span { color:#bbb; font-size:.9rem; }
+    .botao-imoveis { display:inline-block; padding: 12px 18px; border:1.5px solid #fff; color:#fff; text-decoration:none; border-radius:6px; transition:.3s; background:#000; }
+    .botao-imoveis:hover { background:#fff; color:#000; }
+
+    /* TEXTO */
+    .descricao-imovel { color:#e5e5e5; }
+    .descricao-imovel p { color:#cfcfcf; }
+    .amenidades { margin-top: 12px; color:#cfcfcf; columns: 2; column-gap: 24px; }
+    .amenidades li { break-inside: avoid; margin-bottom: 8px; }
+    @media (max-width: 576px){ .amenidades{ columns:1; } }
+
+    /* FORMULÁRIO DO IMÓVEL */
+    .bloco-contato { margin-top: 24px; background:#111; border:1px solid #222; padding: 16px; border-radius:10px; }
+    .bloco-contato input, .bloco-contato textarea {
+      width:100%; background:#0e0e0e; color:#eee; border:1px solid #333; border-radius:8px; padding:12px; margin-bottom:10px;
+      font-family: inherit;
+    }
+
+    /* STICKY CTA (MOBILE) */
+    .sticky-cta {
+      position: fixed; left:0; right:0; bottom:0; background:#000; border-top:1px solid #222; z-index: 999;
+      display: none; gap:10px; padding:10px;
+    }
+    .sticky-cta a { flex:1; text-align:center; }
+    @media (max-width: 992px){ .sticky-cta{ display:flex; } }
+
+    /* FOOTER ajusta respiro */
+    footer.footer-elegante { margin-top: 80px; }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR (igual ao seu projeto) -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm" aria-label="Menu principal">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html" aria-label="EC Imóveis - Início">EC Imóveis</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav mb-2 mb-lg-0 align-items-lg-center gap-2">
+            <li class="nav-item"><a class="nav-link" href="galeria.html">Galeria</a></li>
+            <li class="nav-item"><a class="nav-link" href="imoveis.html">Imóveis</a></li>
+            <li class="nav-item"><a class="nav-link" href="quem-somos.html">Quem Somos</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#contato">Contato</a></li>
+            <li class="nav-item">
+              <a class="btn btn-success ms-lg-3" href="https://wa.me/5511916298686" target="_blank" rel="noopener" aria-label="Fale conosco no WhatsApp">
+                <img src="/ECImoveis/images/WhatsApp_icon.png" alt="WhatsApp" style="width:20px; margin-right:1px; vertical-align:middle;" class="no-filter">WhatsApp
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- BREADCRUMB -->
+  <nav class="breadcrumb-min" aria-label="breadcrumb">
+    <a href="index.html">Início</a> &nbsp;/&nbsp;
+    <a href="imoveis.html">Imóveis</a> &nbsp;/&nbsp;
+    <a href="imoveis-baroneza.html">Quinta da Baroneza</a> &nbsp;/&nbsp;
+    <span>Casa Vista Panorâmica</span>
+  </nav>
+
+  <!-- HERO -->
+  <section class="detalhe-hero" role="img" aria-label="Fachada do imóvel na Quinta da Baroneza">
+    <div class="wrap">
+      <h1>Quinta da Baroneza — Casa Vista Panorâmica</h1>
+      <div class="sub">5 suítes • 820m² • Piscina aquecida • Gourmet integrado • Vista para a mata</div>
+    </div>
+  </section>
+
+  <!-- CONTEÚDO -->
+  <main class="detalhe-grid">
+    <!-- GALERIA -->
+    <section>
+      <div class="galeria-imovel">
+        <!-- Swiper principal -->
+        <div class="swiper main">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img loading="eager" src="/ECImoveis/images/baroneza/1.jpg" alt="Fachada moderna com vista panorâmica"></div>
+            <div class="swiper-slide"><img loading="lazy" src="/ECImoveis/images/baroneza/2.jpg" alt="Living integrado à varanda"></div>
+            <div class="swiper-slide"><img loading="lazy" src="/ECImoveis/images/baroneza/3.jpg" alt="Área gourmet com churrasqueira"></div>
+            <div class="swiper-slide"><img loading="lazy" src="/ECImoveis/images/baroneza/4.jpg" alt="Piscina com borda e deck"></div>
+            <div class="swiper-slide"><img loading="lazy" src="/ECImoveis/images/baroneza/5.jpg" alt="Suíte master com vista para a mata"></div>
+            <!-- VÍDEO -->
+            <div class="swiper-slide">
+              <video controls playsinline preload="metadata" poster="/ECImoveis/images/baroneza/6.jpg">
+                <source src="/ECImoveis/videos/baroneza-1.mp4" type="video/mp4">
+                Seu navegador não suporta vídeo HTML5.
+              </video>
+            </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+        <!-- Thumbs -->
+        <div class="swiper thumbs">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="/ECImoveis/images/baroneza/1.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="/ECImoveis/images/baroneza/2.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="/ECImoveis/images/baroneza/3.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="/ECImoveis/images/baroneza/4.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="/ECImoveis/images/baroneza/5.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="/ECImoveis/images/baroneza/6.jpg" alt="Vídeo"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DESCRIÇÃO -->
+      <article class="descricao-imovel" style="margin-top:28px;">
+        <h2 style="color:#fff; font-size:1.4rem; margin-bottom:8px;">Apresentação</h2>
+        <p>
+          Residência contemporânea na <strong>Quinta da Baroneza</strong>, projetada para integrar lazer, natureza e conforto.
+          São <strong>5 suítes</strong>, <strong>820m²</strong> de área construída, ambientes amplos, climatização,
+          marcenaria sob medida e iluminação técnica. Lazer completo com <em>piscina aquecida</em>, <em>gourmet</em>,
+          <em>sauna</em>, <em>home theater</em> e paisagismo assinado.
+        </p>
+
+        <h3 style="color:#fff; font-size:1.1rem; margin:18px 0 8px;">Amenidades</h3>
+        <ul class="amenidades">
+          <li>Pé-direito duplo</li>
+          <li>Lareira</li>
+          <li>Adega</li>
+          <li>Escritório</li>
+          <li>Dependência de serviço</li>
+          <li>Depósito</li>
+          <li>Sistema de segurança</li>
+          <li>Jardim com irrigação</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- LATERAL -->
+    <aside class="painel-lateral">
+      <h3>Detalhes do imóvel</h3>
+      <div class="fatos">
+        <div><strong>Suítes</strong><span>5</span></div>
+        <div><strong>Banheiros</strong><span>7</span></div>
+        <div><strong>Área útil</strong><span>820 m²</span></div>
+        <div><strong>Terreno</strong><span>2.500 m²</span></div>
+        <div><strong>Vagas</strong><span>6</span></div>
+        <div><strong>Condomínio</strong><span>R$ 0.000*</span></div>
+      </div>
+
+      <a id="cta-whatsapp" class="botao-imoveis" href="#" target="_blank" rel="noopener" style="width:100%; text-align:center; margin-bottom:10px;">
+        Falar no WhatsApp sobre este imóvel
+      </a>
+      <a id="cta-contato" class="botao-imoveis" href="#contato-imovel" style="width:100%; text-align:center;">
+        Solicitar mais informações
+      </a>
+
+      <div class="bloco-contato" id="contato-imovel" style="margin-top:16px;">
+        <form id="form-contato-imovel">
+          <input type="hidden" name="imovel" id="campo-imovel" value="Quinta da Baroneza — Casa Vista Panorâmica">
+          <input type="text" name="nome" placeholder="Seu nome" required>
+          <input type="email" name="email" placeholder="Seu e-mail" required>
+          <textarea name="mensagem" rows="4" placeholder="Mensagem" required></textarea>
+          <button type="submit" class="botao-imoveis" style="width:100%; text-align:center;">Enviar</button>
+        </form>
+      </div>
+      <small style="display:block; color:#777; margin-top:8px;">* Valores e disponibilidades sujeitos a alteração.</small>
+    </aside>
+  </main>
+
+  <!-- STICKY CTA (MOBILE) -->
+  <div class="sticky-cta">
+    <a id="cta-whatsapp-bottom" class="botao-imoveis" href="#" target="_blank" rel="noopener">WhatsApp</a>
+    <a class="botao-imoveis" href="#contato-imovel">Solicitar informações</a>
+  </div>
+
+  <!-- FOOTER (igual ao seu projeto) -->
+  <footer class="footer-elegante">
+    <div class="footer-container">
+      <div class="footer-coluna">
+        <h3>EC IMÓVEIS</h3>
+        <p>Desde 2017 oferecendo exclusividade<br>em imóveis de alto padrão.</p>
+      </div>
+      <div class="footer-coluna">
+        <h3>Endereço</h3>
+        <p>Av. Dra Ruth Cardoso, 4797<br>São Paulo - SP • 05477-000</p>
+      </div>
+      <div class="footer-coluna">
+        <h3>Contato</h3>
+        <p>WhatsApp:<br><a href="https://wa.me/5511916298686" target="_blank">(11) 91629-8686</a></p>
+        <p>Email:<br><a href="mailto:carlappestanasantini@gmail.com">carlappestanasantini@gmail.com</a></p>
+      </div>
+    </div>
+    <div class="footer-social-icons">
+      <div class="social-icons">
+        <a href="https://instagram.com/seuperfil" target="_blank" aria-label="Instagram">
+          <img src="images/instagram-bw.png" alt="Instagram">
+        </a>
+        <a href="https://wa.me/5511916298686" target="_blank" aria-label="WhatsApp">
+          <img src="images/whatsapp-bw.png" alt="WhatsApp">
+        </a>
+        <a href="https://tiktok.com/@seuperfil" target="_blank" aria-label="TikTok">
+          <img src="images/tiktok-bw.png" alt="TikTok">
+        </a>
+        <a href="https://youtube.com/@seucanal" target="_blank" aria-label="YouTube">
+          <img src="images/youtube-bw.png" alt="YouTube">
+        </a>
+      </div>
+      <p>&copy; 2025 EC Imóveis — Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Swiper com thumbs
+    const thumbs = new Swiper('.swiper.thumbs', {
+      slidesPerView: 5,
+      spaceBetween: 10,
+      freeMode: true,
+      watchSlidesProgress: true,
+      breakpoints: {
+        0: { slidesPerView: 4 },
+        768: { slidesPerView: 5 },
+        1200: { slidesPerView: 6 }
+      }
+    });
+    const main = new Swiper('.swiper.main', {
+      loop: true,
+      spaceBetween: 10,
+      pagination: { el: '.swiper-pagination', clickable: true },
+      navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+      thumbs: { swiper: thumbs }
+    });
+
+    // Prefill imovel via querystring (fallback: H1)
+    (function () {
+      const params = new URLSearchParams(window.location.search);
+      const nomeImovelQS = params.get('imovel');
+      const nomeImovel = nomeImovelQS || document.querySelector('.detalhe-hero h1')?.textContent?.trim() || 'Imóvel EC Imóveis';
+
+      // WhatsApp
+      const numero = '5511916298686';
+      const msg = `Olá! Tenho interesse no imóvel: ${nomeImovel}. Poderiam me enviar mais detalhes e opções de visita?`;
+      const wa = `https://wa.me/${numero}?text=${encodeURIComponent(msg)}`;
+      document.getElementById('cta-whatsapp').href = wa;
+      document.getElementById('cta-whatsapp-bottom').href = wa;
+
+      // Formulário (campo oculto + mensagem padrão)
+      const campoImovel = document.getElementById('campo-imovel');
+      if (campoImovel) campoImovel.value = nomeImovel;
+
+      const form = document.getElementById('form-contato-imovel');
+      const txt = form?.querySelector('textarea[name="mensagem"]');
+      if (txt && !txt.value) {
+        txt.value = `Olá! Tenho interesse no imóvel: ${nomeImovel}.
+Poderiam me enviar mais detalhes (valor, condomínio, IPTU) e opções de visita?
+Obrigado!`;
+      }
+
+      // Envio (demo)
+      form?.addEventListener('submit', function(e){
+        e.preventDefault();
+        alert('Mensagem enviada com sucesso! Em breve entraremos em contato.');
+        this.reset();
+      });
+    })();
+  </script>
+
+  <!-- JSON-LD básico -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Quinta da Baroneza — Casa Vista Panorâmica",
+    "description": "Casa de alto padrão na Quinta da Baroneza com 5 suítes e 820m².",
+    "about": { "@type": "House", "numberOfRooms": "5", "address": "Quinta da Baroneza, SP" },
+    "publisher": { "@type": "RealEstateAgent", "name": "EC Imóveis", "telephone": "+55-11-91629-8686" }
+  }
+  </script>
+</body>
+</html>
